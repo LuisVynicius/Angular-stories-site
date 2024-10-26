@@ -1,0 +1,14 @@
+.container {
+    color: grey;
+    user-select: none;
+}
+
+.container > span {
+    display: inline-block;
+    transform: scaleY(4) scaleX(3);
+}
+
+.container > span:hover {
+    cursor: pointer;
+    color: #919191;
+}
