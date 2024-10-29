@@ -1,0 +1,25 @@
+.container {
+    background-color: rgba(4, 5, 5, 0.80);
+    width: 125px;
+    height: 50px;
+    margin: 5px;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.container_img {
+    padding-right: 4px;
+}
+
+.container_text > a{
+    text-decoration: none;
+    color: white;   
+}

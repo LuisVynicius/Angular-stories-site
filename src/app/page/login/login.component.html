@@ -1,1 +1,59 @@
-<p>login works!</p>
+
+<div class="container">
+
+    <div class="container_login">
+
+        <div class="container_login_profiles">
+
+            <app-redirect-button text="Github" imgURL="githubIcon.png"></app-redirect-button>
+            <app-redirect-button text="Linkedin" imgURL="linkedin.png"></app-redirect-button>
+            
+        </div>
+    
+        <hr>
+    
+        <div class="container_login_LoR" [ngSwitch]="hasAccount">
+
+            <div class="container_login_LoR_login" *ngSwitchCase="true">
+    
+                <app-custom-button
+                    text="Email" type="text"
+                ></app-custom-button>
+    
+                <app-custom-button
+                    text="Password" type="password"
+                ></app-custom-button>
+
+                <app-login-button text="Logar" (click)="loggin()" ></app-login-button>
+    
+            </div>
+    
+            <div class="container_login_LoR_register" *ngSwitchCase="false">
+    
+                <app-custom-button
+                    text="Full name" type="text"
+                ></app-custom-button>
+
+                <app-custom-button
+                    text="Email" type="text"
+                ></app-custom-button>
+    
+                <app-custom-button
+                    text="Password" type="password"
+                ></app-custom-button>
+
+                <app-login-button text="Register" (click)="register()"></app-login-button>
+
+            </div>
+
+            <div class="switch">
+
+                <span (click)="switchText()">{{text}}</span>
+
+            </div>
+    
+        </div>
+
+    </div>
+
+</div>

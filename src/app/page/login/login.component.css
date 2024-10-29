@@ -1,0 +1,52 @@
+hr {
+    border: 1px solid #040505d7;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.container {
+    display: flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+    justify-content: center;
+    color: white;
+    
+}
+
+.container_login {
+    width: 400px;
+    height: fit-content;
+
+    background-color: rgba(4, 5, 5, 0.35);
+
+    border-radius: 30px;
+}
+
+.container_login_profiles {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.container_login_LoR_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_login_LoR_register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.switch {
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 5px;
+
+    cursor: pointer;
+
+    user-select: none;
+}
