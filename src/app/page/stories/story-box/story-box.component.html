@@ -1,0 +1,45 @@
+<div class="container">
+
+    <div class="container_title">
+
+        <h2>{{title}}</h2>
+
+    </div>
+
+    <div class="container_by">
+
+        <h4>Escrito por: {{createBy}}</h4>
+
+    </div>
+
+    <div class="container_informations">
+
+        <div class="container_informations_infos">
+
+            <ul>
+                <li>Capitulos: {{chapterCount}}</li>
+                <li>Categorias: {{categories}}</li>
+            </ul>
+
+        </div>
+
+        <div class="container_informations_description">
+
+            <p>Descrição: {{description}}</p>
+
+        </div>
+
+    </div>
+
+    <div class="container_background">
+
+        <div class="container_background_button">
+    
+            <button (click)="redirectToStory(title)">Ler</button>
+    
+        </div>
+
+    </div>
+
+
+</div>

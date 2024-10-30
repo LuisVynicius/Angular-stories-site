@@ -1,0 +1,39 @@
+.container {
+    width: 700px;
+    height: 130px;
+
+    background-color: #080808;
+    color: white;
+
+    border-radius: 5px;
+
+    margin-bottom: 10px;
+}
+
+.container_background {
+    display: flex;
+    justify-content: center;
+}
+
+.container_background_button > button {
+    width: 550px;
+
+    background-color: #8c9da2;
+
+    border-radius: 10px;
+    
+    cursor: pointer;
+}
+
+.container_background_button > button:hover {
+    background-color: #78868a;
+}
+
+.container_background_button > button:active {
+    position: relative;
+    top: 1px;
+}
+
+.container_informations_infos > ul > li{
+    list-style-type: none;
+}

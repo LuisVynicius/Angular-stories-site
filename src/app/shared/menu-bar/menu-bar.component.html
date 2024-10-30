@@ -1,14 +1,23 @@
 <div class="container">
 
     <div class="container_logo">
-        <img
-            src="gojoIcon.jpg"
-            alt=""
-            width="50px"
-            height="50px"
-        >
+    
+        <div class="container_logo_img">
 
-        <p>Nome do site</p>
+            <a [routerLink]="['/']">
+                <img
+                    src="siteLogo.png"
+                    alt=""
+                    width="50px"
+                    height="50px"
+                >
+            </a>
+
+        </div>
+
+        <a [routerLink]="['/']">
+            <p>Stories</p>
+        </a>
 
     </div>
 

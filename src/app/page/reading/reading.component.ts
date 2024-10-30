@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { MoveButtonComponent } from './move-button/move-button.component';
 
 @Component({
@@ -10,6 +11,27 @@ import { MoveButtonComponent } from './move-button/move-button.component';
   templateUrl: './reading.component.html',
   styleUrl: './reading.component.css'
 })
-export class ReadingComponent {
+export class ReadingComponent implements OnInit {
+
+  constructor(private activedRoute: ActivatedRoute) {
+
+  }
+
+  ngOnInit(): void {
+    let bookTitle: string | null = "";
+    let chapter: number | null = 0;
+
+    this.activedRoute.paramMap
+      .subscribe(params => {
+        bookTitle = params.get('title');
+        chapter = Number(params.get('chapter'));
+    });
+
+    console.log(bookTitle + " | " + chapter);
+  }
+
+  getBook(title: string | null) {
+
+  }
   
 }

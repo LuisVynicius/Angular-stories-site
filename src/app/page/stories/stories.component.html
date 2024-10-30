@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="container_background">
+
+        <div class="container_background_title">
+
+            <div class="container_background_title_text">
+
+                <h2>Descobrir</h2>
+
+            </div>
+
+        </div>
+
+        <div class="container_background_stories">
+
+            <ul>
+
+                <li *ngFor="let i of items">
+                    <app-story-box
+                        [title]="i.title"
+                        [createBy]="i.createBy"
+                        [chapterCount]="i.chapterCount.toString()"
+                        [categories]="i.categories"
+                        [description]="i.description"
+                    ></app-story-box>
+                </li>
+
+            </ul>
+            
+        </div>
+
+    </div>
+
+</div>

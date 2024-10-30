@@ -20,10 +20,26 @@
     justify-content: center;
 
     cursor: pointer;
+
 }
 
-.container_logo > p {
+.container_logo > a {
+    text-decoration: none;
+    color: white;
+}
+
+.container_logo > a > p {
     padding-left: 15px;
+}
+
+.container_logo_img {
+    background-color: white;
+    border-radius: 25px;
+}
+
+.container_logo_img > img {
+    position: relative;
+    top: 2px
 }
 
 .container_options {
