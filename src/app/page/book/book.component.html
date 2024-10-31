@@ -6,15 +6,15 @@
 
             <div class="container_middle_text_title">
 
-                <h2>Livro legal</h2>
+                <h2>{{bookName}}</h2>
 
             </div>
 
             <div class="container_middle_text_informations">
 
                 <ul>
-                    <li>Criado por: Mevy</li>
-                    <li>Capitulos: 10</li>
+                    <li>Criado por: {{createBy}}</li>
+                    <li>Capitulos: {{chapsNumber}}</li>
                     <li>Categorias: Terror, Ação</li>
                 </ul>
 
@@ -24,7 +24,7 @@
 
             <div class="container_middle_text_description">
 
-                <p>Descrição muito épica e descritivel</p>
+                <p>{{description}}</p>
 
             </div>
 
@@ -37,7 +37,7 @@
             <ul>
 
                 <li *ngFor="let chap of chaps; let i = index">
-                    <app-chapter-box [chapNumber]="(i + 1).toString()" [chapTitle]="chap.title"></app-chapter-box>
+                    <app-chapter-box [bookName]="bookName!" [chapNumber]="(i + 1).toString()" [chapTitle]="chap.title"></app-chapter-box>
                 </li>
             </ul>
 

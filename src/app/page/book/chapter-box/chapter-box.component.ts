@@ -15,4 +15,6 @@ export class ChapterBoxComponent {
   chapNumber: string = "";
   @Input()
   chapTitle: string = "";
+  @Input()
+  bookName: string = "";
 }

@@ -25,7 +25,7 @@ export class StoryBoxComponent {
   }
 
   redirectToStory(title: string) {
-    this.router.navigate(['/reading/' + title + '/1']);
+    this.router.navigate(['/book/' + title]);
   }
 
 }
