@@ -7,7 +7,7 @@
 
     border-radius: 5px;
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .container_background {
@@ -32,6 +32,10 @@
 .container_background_button > button:active {
     position: relative;
     top: 1px;
+}
+
+.container_informations {
+    padding-bottom: 5px;
 }
 
 .container_informations_infos > ul > li{

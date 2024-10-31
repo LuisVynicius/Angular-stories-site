@@ -6,18 +6,6 @@ import { BookComponent } from './page/book/book.component';
 
 export const routes: Routes = [
     {
-        path: 'reading/:title',
-        // Mudar isso aqui
-        component: ReadingComponent,
-        pathMatch: 'prefix',
-        children: [
-            {
-                path: ':chapter',
-                component: ReadingComponent
-            }
-        ]
-    },
-    {
         path: 'login',
         component: LoginComponent,
         pathMatch: 'full'
@@ -25,17 +13,17 @@ export const routes: Routes = [
     {
         path: 'stories',
         component: StoriesComponent,
-        pathMatch: 'prefix'
+        pathMatch: 'full'
     },
     {
-        path: 'book',
-        pathMatch: 'prefix',
-        children: [
-            {
-                path: ':name',
-                component: BookComponent
-            }
-        ]
+        path: 'book/:title',
+        component: BookComponent,
+        pathMatch: 'full'
+    },
+    {
+        path: 'book/:title/:number',
+        component: ReadingComponent,
+        pathMatch: 'full'
     },
     {
         path: '**',

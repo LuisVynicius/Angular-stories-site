@@ -10,7 +10,9 @@
 
     width: 800px;
     height: fit-content;
-    background-color: black;
+
+    background-color: rgba(4, 5, 5, 0.70);
+    border-radius: 30px;
 }
 
 .container_background_title {
