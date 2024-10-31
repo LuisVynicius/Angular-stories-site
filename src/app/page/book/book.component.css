@@ -1,0 +1,40 @@
+li {
+    list-style: none;
+}
+
+hr {
+    border: 1px solid #040505d7;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container_middle {
+    color: white;
+    
+    background-color: rgba(4, 5, 5, 0.70);
+    border-radius: 30px;
+
+    width: 800px;
+    height: fit-content;
+
+    padding: 10px;
+}
+
+.container_middle_text {
+    padding: 15px;
+}
+
+.container_middle_text_title {
+    display: flex;
+    justify-content: center;
+}
+
+.container_middle_text_description {
+    display: flex;
+    justify-content: center;
+}

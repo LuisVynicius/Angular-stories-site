@@ -1,0 +1,38 @@
+.container {
+    background-color: rgba(4, 5, 5, 0.40);
+    width: 650px;
+    
+    border-radius: 15px;
+    
+    margin-bottom: 10px;
+
+    padding: 5px;
+}
+
+.container:hover {
+    background-color: rgba(4, 5, 5, 0.90);
+}
+
+.container:active {
+    background-color: rgba(4, 5, 5, 1.00);    
+
+    position: relative;
+    top: 1px;
+}
+
+.container > a {
+    text-decoration: none;  
+}
+
+.container_background {
+    display: flex;
+
+    padding-left: 15px;
+
+    color: white;
+}
+
+.container_background_separator {
+    margin-left: 5px;
+    margin-right: 5px;
+}

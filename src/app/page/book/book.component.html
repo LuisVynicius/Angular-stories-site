@@ -1,5 +1,48 @@
 <div class="container">
 
-    
+    <div class="container_middle">
+        
+        <div class="container_middle_text">
+
+            <div class="container_middle_text_title">
+
+                <h2>Livro legal</h2>
+
+            </div>
+
+            <div class="container_middle_text_informations">
+
+                <ul>
+                    <li>Criado por: Mevy</li>
+                    <li>Capitulos: 10</li>
+                    <li>Categorias: Terror, Ação</li>
+                </ul>
+
+            </div>
+
+            <hr>
+
+            <div class="container_middle_text_description">
+
+                <p>Descrição muito épica e descritivel</p>
+
+            </div>
+
+            <hr>
+
+        </div>
+
+        <div class="container_chapters">
+
+            <ul>
+
+                <li *ngFor="let chap of chaps; let i = index">
+                    <app-chapter-box [chapNumber]="(i + 1).toString()" [chapTitle]="chap.title"></app-chapter-box>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
 
 </div>
