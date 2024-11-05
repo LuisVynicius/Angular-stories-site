@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { chapter } from '../../objects/chapter';
 import { ChapterBoxComponent } from './chapter-box/chapter-box.component';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { book } from '../../objects/book';
+import { fdates } from '../../fakeData/fdates';
 
 @Component({
   selector: 'app-book',
@@ -15,16 +17,12 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
   templateUrl: './book.component.html',
   styleUrl: './book.component.css'
 })
-export class BookComponent {
+export class BookComponent implements OnInit{
   @Input()
   bookName: string | null = "";
-  @Input()
-  createBy: string = "";
-  @Input()
-  chapsNumber: number = 0;
-  @Input()
-  description: string = "";
   
+  book: book | undefined;
+
   constructor(
     private activedRoute: ActivatedRoute
   ) {
@@ -32,22 +30,8 @@ export class BookComponent {
       this.bookName = params.get("title");
     });
   }
+  ngOnInit(): void {
+    this.book = fdates[0]
+  }
 
-  chaps: chapter[] = [
-    {
-      title: "O começo da aventura"
-    },
-    {
-      title: "O Goku aparece em algum lugar"
-    },
-    {
-      title: "O Goku está indo ali"
-    },
-    {
-      title: "Caramba, o Goku Morreu"
-    },
-    {
-      title: "O Goku revive e ganha, fim"
-    },
-  ];
 }

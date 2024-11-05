@@ -25,9 +25,7 @@ export class ReadingComponent implements OnInit {
       .subscribe(params => {
         bookTitle = params.get('title');
         chapter = Number(params.get('chapter'));
-    });
-
-    console.log(bookTitle + " | " + chapter);
+      });
   }
 
   getBook(title: string | null) {

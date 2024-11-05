@@ -21,7 +21,7 @@ export const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'book/:title/:number',
+        path: 'book/:title/:chapter',
         component: ReadingComponent,
         pathMatch: 'full'
     },

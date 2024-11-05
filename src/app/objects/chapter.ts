@@ -1,3 +1,4 @@
 export type chapter = {
-    title: string
+    title: string,
+    lines: string[]
 }

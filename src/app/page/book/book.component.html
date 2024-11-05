@@ -6,16 +6,16 @@
 
             <div class="container_middle_text_title">
 
-                <h2>{{bookName}}</h2>
+                <h2>{{book!.title}}</h2>
 
             </div>
 
             <div class="container_middle_text_informations">
 
                 <ul>
-                    <li>Criado por: {{createBy}}</li>
-                    <li>Capitulos: {{chapsNumber}}</li>
-                    <li>Categorias: Terror, Ação</li>
+                    <li>Criado por: {{book!.createBy}}</li>
+                    <li>Capitulos: {{book!.chapterCount}}</li>
+                    <li>Categorias: {{book!.categories}}</li>
                 </ul>
 
             </div>
@@ -24,7 +24,7 @@
 
             <div class="container_middle_text_description">
 
-                <p>{{description}}</p>
+                <p>{{book!.description}}</p>
 
             </div>
 
@@ -36,9 +36,10 @@
 
             <ul>
 
-                <li *ngFor="let chap of chaps; let i = index">
+                <li *ngFor="let chap of book!.chapters; let i = index">
                     <app-chapter-box [bookName]="bookName!" [chapNumber]="(i + 1).toString()" [chapTitle]="chap.title"></app-chapter-box>
                 </li>
+
             </ul>
 
         </div>
