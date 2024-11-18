@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent {
   hasAccount = false;
   text: string = "Não possuo uma conta";
-
+  
   loggin() {
     console.log("Logging");
   }
@@ -30,11 +30,11 @@ export class LoginComponent {
 
   switchText() {
     if (this.hasAccount === true) {
-      this.text = "Não possuo uma conta";
+      this.text = "Já possuo uma conta";
       this.hasAccount = false;
     }
     else {
-      this.text = "Já possuo uma conta"
+      this.text = "Não possuo uma conta"
       this.hasAccount = true;
     }
   }

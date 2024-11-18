@@ -1,0 +1,31 @@
+.container {
+    cursor: pointer;
+    user-select: none;
+}
+
+.container_background {
+    border-radius: 5px;
+    
+    background-color: rgb(38, 43, 41);
+    
+    font-size: 10px;
+    color: white;
+
+    width: 152px;
+    height: 20px;
+
+    padding-left: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_background:hover {
+    background-color: rgb(32, 36, 35);
+}
+
+.container_background:active {
+    position: relative;
+    top: 1px;
+}

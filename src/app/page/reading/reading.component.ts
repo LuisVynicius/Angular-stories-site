@@ -29,7 +29,7 @@ export class ReadingComponent implements OnInit {
   }
 
   getBook(title: string | null) {
-
+    
   }
   
 }

@@ -17,7 +17,12 @@ export class MenuBarComponent {
 
   }
 
-  goStoriesPage() {
+  goToStoriesPage() {
     this.navegator.navigate(['/stories']);
   }
+
+  goToProfilePage() {
+    this.navegator.navigate(['/profile/' + "Token"]);
+  }
+
 }

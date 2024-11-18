@@ -1,0 +1,103 @@
+<div class="container">
+
+    <div class="container_background">
+
+        <div class="container_background_top">
+
+            <div class="container_background_top_image">
+
+                <img
+                    src="gojoIcon.jpg"
+                    alt=""
+                    width= "130px"
+                    height="130px"
+                />
+
+            </div>
+
+        </div>
+        
+        <hr>
+
+        <div class="container_background_options">
+
+            <ul>
+                <li>
+                    <app-custom-option text="Minhas histórias" (click)="toMyStoriesPage()"></app-custom-option>
+                </li>
+                <li>
+                    <app-custom-option text="Favoritos" (click)="toFavoritePage()"></app-custom-option>
+                </li>
+            </ul>
+
+        </div>
+
+        <hr>
+
+        <div [ngSwitch]="page" class="container_background_bottom">
+
+            <div *ngSwitchCase="true" class="container_background_bottom_favorites">
+
+                <div class="container_background_bottom_background">
+                    
+                    <ul>
+                        
+                        <li *ngFor="let storie of favoriteStories">
+
+                            <app-story-box 
+                                [title]="storie.title"
+                                [createBy]="storie.createBy"
+                                [chapterCount]="storie.chapterCount.toString()"
+                                [categories]="storie.categories"
+                                [description]="storie.description"
+                            >
+                            </app-story-box>
+
+                        </li>
+                    
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div *ngSwitchCase="false" class="container_background_bottom_mystories">
+
+                <div class="container_background_create">
+
+                    <div class="container_background_create_text">
+        
+                        <button>Criar História</button>
+        
+                    </div>
+        
+                </div>
+
+                <div class="container_background_bottom_background">
+                   
+                    <ul>
+                        
+                        <li *ngFor="let storie of myStories">
+
+                            <app-story-box 
+                                [title]="storie.title"
+                                [createBy]="storie.createBy"
+                                [chapterCount]="storie.chapterCount.toString()"
+                                [categories]="storie.categories"
+                                [description]="storie.description"
+                            >
+                            </app-story-box>
+
+                        </li>
+                    
+                    </ul>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

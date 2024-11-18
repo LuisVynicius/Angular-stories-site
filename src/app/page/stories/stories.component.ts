@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { StoryBoxComponent } from './story-box/story-box.component';
 import { CommonModule } from '@angular/common';
-import { fdates } from '../../fakeData/fdates'; '../../fakeData/fdates';
+import { fdates } from '../../fakeData/fdates';import { StoryBoxComponent } from '../../shared/story-box/story-box.component';
+ '../../fakeData/fdates';
 
 @Component({
   selector: 'app-stories',

@@ -18,7 +18,15 @@
 
             <ul>
                 <li>Capitulos: {{chapterCount}}</li>
-                <li>Categorias: {{categories}}</li>
+                <li>Categorias:
+                    
+                    <div class="container_informations_infos_ul">
+                        <span *ngFor="let category of categories">
+                            <app-category-box [text]="category"></app-category-box>
+                        </span>
+                    </div>
+
+                </li>
             </ul>
 
         </div>

@@ -3,7 +3,7 @@ export const fdates = [
     title: "Livro numero 1",
     createBy: "Mevy",
     chapterCount: 90,
-    categories: "Terror",
+    categories: ["Terror", "Ação", "Aventura"],
     description: "Descrição muito legal",
     chapters: [
       {
@@ -72,7 +72,7 @@ export const fdates = [
     title: "Livro número 2",
     createBy: "Mevy",
     chapterCount: 85,
-    categories: "Fantasia",
+    categories: ["Fantasia", "Ação"],
     description: "Uma jornada mágica e misteriosa por terras desconhecidas.",
     chapters: [
       {
