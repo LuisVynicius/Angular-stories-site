@@ -18,7 +18,7 @@ import { CommonModule } from '@angular/common';
 })
 export class LoginComponent {
   hasAccount = false;
-  text: string = "Não possuo uma conta";
+  text: string = "Já possuo uma conta";
   
   loggin() {
     console.log("Logging");
