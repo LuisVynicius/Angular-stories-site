@@ -1,10 +1,11 @@
 .container {
     background-color: rgba(0, 0, 0, 0.35);
-    border-radius: 35px;
+    border-radius: 25px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
 
     flex-direction: column;
+
+    padding-top: 15px;
 }

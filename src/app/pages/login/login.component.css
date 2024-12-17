@@ -1,4 +1,18 @@
-.container_login {
+span {
+    cursor: pointer;
+    color: white;
+
+    font-size: 12px;
+}
+
+span:active {
+    position: relative;
+    top: 1px;
+
+    user-select: none;
+}
+
+.container {
     height: 100vh;
 
     display: flex;
@@ -16,20 +30,18 @@
 }
 
 .container_login_text {
-    color: white;
-
-    font-size: 12px;
-    
     margin-bottom: 4px;
 }
 
-.container_login_text:hover {
-    cursor: pointer;
+.container_register_input {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 4px;
 }
 
-.container_login_text:active {
-    position: relative;
-    top: 1px;
-
-    user-select: none;
+.container_register_text {
+    margin-bottom: 4px;
 }
