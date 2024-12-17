@@ -1,0 +1,14 @@
+.container > input {
+    background-color: gray;
+    
+    color: white;
+    font-weight: bold;
+    
+    border: none;
+    border-radius: 35px;
+}
+
+.container > input:active {
+    position: relative;
+    top: 1px;
+}
