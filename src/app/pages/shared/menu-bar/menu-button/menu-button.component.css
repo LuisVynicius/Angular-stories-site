@@ -1,0 +1,8 @@
+.container {
+    transform: rotate(90deg);
+}
+
+.container_text {
+    font-size: 30px;
+    font-weight: bold;
+}
