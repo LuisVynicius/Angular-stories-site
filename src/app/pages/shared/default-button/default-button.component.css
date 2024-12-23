@@ -6,9 +6,22 @@
     
     border: none;
     border-radius: 35px;
+
+    cursor: pointer;
 }
 
 .container > input:active {
+    position: relative;
+    top: 1px;
+}
+
+.container > input:hover {
+    background-color: rgba(128, 128, 128, 0.774);
+}
+
+.container > input:active {
+    background-color: rgba(128, 128, 128, 0.629);
+    
     position: relative;
     top: 1px;
 }

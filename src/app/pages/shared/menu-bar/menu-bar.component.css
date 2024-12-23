@@ -11,8 +11,6 @@
 
     color: white;
 
-    cursor: pointer;
-
     user-select: none;
 }
 
@@ -23,6 +21,8 @@
     display: flex;
 
     gap: 15px;
+    
+    cursor: pointer;
 }
 
 .container_logo_img > b {
@@ -58,6 +58,8 @@
     
     display: flex;
     align-items: center;
+    
+    cursor: pointer;
 }
 
 .container_right_img > img{
