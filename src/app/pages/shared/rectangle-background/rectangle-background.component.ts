@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 
 @Component({
   selector: 'app-rectangle-background',
@@ -13,4 +13,22 @@ export class RectangleBackgroundComponent {
 
   @Input()
   height: string = "0px";
+
+  @Input()
+  display: string = "block";
+
+  @Input()
+  flexDirection: string = "";
+
+  @Input()
+  gap: string = "";
+
+  @Input()
+  flexWrap: string = "";
+
+  @Input()
+  alignItems: string = "";
+
+  @Input()
+  justifyContent: string = "";
 }

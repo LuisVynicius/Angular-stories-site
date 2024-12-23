@@ -1,0 +1,55 @@
+<div class="container">
+
+    <div class="container_name">
+
+        <div class="container_name_title">
+
+            <h1>{{bookName}}</h1>
+
+        </div>
+
+        <div class="container_name_author">
+
+            <h3>Escritor: {{author}}</h3>
+
+        </div>
+
+    </div>
+
+    <div class="container_informations">
+
+        <div class="container_informations_basic">
+
+            <p>Quantidade de capítulos: {{quantity}}</p>
+            <p>Atualizado em: {{updateDate}}</p>
+
+        </div>
+
+        <div class="container_informations_categories">
+
+            <div class="container_informations_categories_text">
+
+                <b>Gêneros</b>
+
+            </div>
+            
+            <div class="container_informations_categories_categories">
+
+                <app-category
+                    *ngFor="let category of categories"
+                    [text]="category"
+                ></app-category>
+
+            </div>
+            
+        </div>
+
+        <div class="container_informations_description">
+
+            <span>{{description}}</span>
+
+        </div>
+
+    </div>
+
+</div>
