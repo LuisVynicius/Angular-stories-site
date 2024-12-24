@@ -1,0 +1,71 @@
+<div class="container">
+
+    <app-rectangle-background
+        width="1200px"
+        height="fit-content"
+    >
+
+        <div class="container_name">
+
+            <div class="container_name_title">
+
+                <h1>Nome do livro</h1>
+                
+            </div>
+
+            <div class="container_name_author">
+
+                <h3>Escritor: Author</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="container_img">
+
+            <app-img
+                img="gojo.jpeg"
+                [fav]="fav"
+            ></app-img>
+
+        </div>
+
+        <div class="container_categorie">
+
+            <div class="container_categorie_text">
+
+                <span>Categorias</span>
+
+            </div>
+
+            <div class="container_categorie_categories">
+
+                <app-category
+                    *ngFor="let category of [1,2,3,4,5]"
+                    text="category"
+                ></app-category>
+
+            </div>
+
+            <hr>
+
+        </div>
+
+        <div class="container_chapters">
+
+            <app-rectangle-background
+                width="1000px"
+                height="fit-content"
+            >
+
+                <app-chapter *ngFor="let chapter of [1,2,3,4,5]; let i = index"
+                    text="Capitulo {{i+1}}: Capitulo"
+                ></app-chapter>
+
+            </app-rectangle-background>
+
+        </div>
+
+    </app-rectangle-background>
+
+</div>

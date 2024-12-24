@@ -1,8 +1,7 @@
 .container {
     width: 260px;
     height: 200px;
-
-    background-color: black;
+    background: rgba(0, 0, 0, 0.819);
     color: white;
 
     padding: 3px;

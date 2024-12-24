@@ -1,0 +1,20 @@
+.container_photo {
+    position: relative;
+}
+
+.container_photo_fav {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    cursor: pointer;
+}
+
+
+.container_photo_fav:active {
+    top: 1px;
+}
+
+.container_photo_fav img {
+    display: block;
+}

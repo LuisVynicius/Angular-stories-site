@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_name {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    color: white;
+    
+    cursor: pointer;
+}
+
+.container_name_author {
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+.container_name_title:hover {
+    color: rgba(255, 255, 255, 0.801);
+}
+
+.container_name_title:active {
+    position: relative;
+    top: 1px;
+}
+
+.container_name_author:hover {
+    color: rgba(255, 255, 255, 0.801);
+}
+
+.container_name_author:active {
+    position: relative;
+    top: 1px;
+}
+
+.container_img {
+    display: flex;
+    justify-content: center;
+}
+
+.container_categorie {
+    margin-top: 5px;
+}
+
+.container_categorie_text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.container_categorie_categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    margin-bottom: 15px;
+    gap: 3px;
+}
+
+.container_chapters {
+    display: flex;
+    justify-content: center;
+}
