@@ -1,3 +1,8 @@
+hr {
+    border: 2px solid black;
+    margin: 15px 0px 15px 0px;
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -50,6 +55,8 @@
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
+
+    color: white;
 }
 
 .container_categorie_categories {
@@ -59,6 +66,13 @@
     
     margin-bottom: 15px;
     gap: 3px;
+}
+
+.container_description {
+    display: flex;
+    justify-content: center;
+
+    color: white;
 }
 
 .container_chapters {
