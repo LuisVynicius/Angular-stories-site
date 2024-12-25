@@ -9,37 +9,9 @@ hr {
     justify-content: center;
 }
 
-.container_name {
+.container_title {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    color: white;
-    
-    cursor: pointer;
-}
-
-.container_name_author {
-    font-size: 11px;
-    margin-bottom: 15px;
-}
-
-.container_name_title:hover {
-    color: rgba(255, 255, 255, 0.801);
-}
-
-.container_name_title:active {
-    position: relative;
-    top: 1px;
-}
-
-.container_name_author:hover {
-    color: rgba(255, 255, 255, 0.801);
-}
-
-.container_name_author:active {
-    position: relative;
-    top: 1px;
+    justify-content: center;
 }
 
 .container_img {

@@ -1,0 +1,32 @@
+.container {
+    color: white;
+    
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container_title:hover {
+    color: rgba(255, 255, 255, 0.801);
+}
+
+.container_title:active {
+    position: relative;
+    top: 1px;
+}
+
+.container_author {
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+.container_author:hover {
+    color: rgba(255, 255, 255, 0.801);
+}
+
+.container_author:active {
+    position: relative;
+    top: 1px;
+}

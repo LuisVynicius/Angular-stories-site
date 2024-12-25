@@ -2,7 +2,10 @@
 
     <div class="container_name">
 
-        <div class="container_name_title">
+        <div
+            class="container_name_title"
+            [routerLink]="['/book/' + bookName]"
+        >
 
             <h1>{{bookName}}</h1>
 

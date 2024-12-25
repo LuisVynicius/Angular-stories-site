@@ -1,1 +1,52 @@
-<p>reading works!</p>
+<div class="container">
+
+    <app-rectangle-background
+        width="1000px"
+        height="fit-content"
+    >
+
+        <div class="container_title">
+
+            <app-book-names
+                [bookName]="bookName!"
+                [author]="author!"
+            ></app-book-names>
+
+        </div>
+
+        <div class="container_text">
+
+            <app-rectangle-background
+            width="900px"
+            height="fit-content"
+            >
+
+                <div class="container_text_p">
+
+                    <p>{{text}}</p>
+
+                </div>
+
+            </app-rectangle-background>
+
+        </div>
+
+        <div class="container_button">
+
+            <app-default-button
+                text="<"
+                width="400px"
+                height="25px"
+            ></app-default-button>
+
+            <app-default-button
+                text=">"
+                width="400px"
+                height="25px"
+            ></app-default-button>
+    
+        </div> 
+
+    </app-rectangle-background>
+
+</div>

@@ -5,19 +5,12 @@
         height="fit-content"
     >
 
-        <div class="container_name">
+        <div class="container_title">
 
-            <div class="container_name_title">
-
-                <h1>Nome do livro</h1>
-                
-            </div>
-
-            <div class="container_name_author">
-
-                <h3>Escritor: Author</h3>
-                
-            </div>
+            <app-book-names
+                [bookName]="bookName!"
+                [author]="author!"
+            ></app-book-names>
 
         </div>
 
@@ -66,6 +59,7 @@
 
                 <app-chapter *ngFor="let chapter of [1,2,3,4,5]; let i = index"
                     text="Capitulo {{i+1}}: Capitulo"
+                    [routerLink]="['/book/' + bookName + '/' + (i+1)]"
                 ></app-chapter>
 
             </app-rectangle-background>
