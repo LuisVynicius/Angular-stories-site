@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container_profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+hr {
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 5px 3px 5px 3px;
+}
+
+.container_options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 5px;
+}
+
+.container_stories {
+    display: flex;
+    justify-content: center;
+}
+
+.container_stories_components {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

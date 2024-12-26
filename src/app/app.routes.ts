@@ -3,6 +3,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { BooksComponent } from './pages/books/books.component';
 import { BookViewComponent } from './pages/book-view/book-view.component';
 import { ReadingComponent } from './pages/reading/reading.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 export const routes: Routes = [
     {
@@ -23,6 +24,11 @@ export const routes: Routes = [
     {
         path: 'book/:name/:chapter',
         component: ReadingComponent,
+        pathMatch: 'full'
+    },
+    {
+        path: 'profile/:name',
+        component: ProfileComponent,
         pathMatch: 'full'
     },
     {

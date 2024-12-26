@@ -1,0 +1,66 @@
+<div class="container">
+
+    <app-rectangle-background
+        width="1200px"
+        height="fit-content"
+    >
+
+        <div class="container_profile">
+
+            <div class="container_profile_photo">
+
+                <img
+                    src="gojo.jpeg"
+                    width="150px"
+                    style="border-radius: 50%;"
+                    alt=""
+                >
+
+            </div>
+
+            <div class="container_profile_name">
+
+                <h1>{{name}}</h1>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="container_options">
+            
+            <app-default-button
+                width="100px"
+                height="30px"
+                text="Histórias"
+            ></app-default-button>
+
+            <app-default-button
+                width="100px"
+                height="30px"
+                text="Favoritos"
+            ></app-default-button>
+
+        </div>
+
+        <div class="container_stories">
+            
+            <app-rectangle-background
+                width="1100px"
+                height="fit-content"
+            >
+
+                <div class="container_stories_components">
+
+                    <app-book *ngFor="let x of [1,1,1,1]"></app-book>
+
+                </div>
+
+            </app-rectangle-background>
+
+        </div>
+
+    </app-rectangle-background>
+
+</div>
