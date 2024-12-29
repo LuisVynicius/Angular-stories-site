@@ -33,5 +33,18 @@ hr {
 .container_stories_components {
     display: flex;
     justify-content: center;
+}
+
+.container_stories_components_list {
+    display: flex;
+    justify-content: center;
+    
+    gap: 10px;
+}
+
+.container_stories_components_favorite {
+    display: flex;
+    justify-content: center;
+    
     gap: 10px;
 }

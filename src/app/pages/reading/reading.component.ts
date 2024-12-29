@@ -3,6 +3,7 @@ import { RectangleBackgroundComponent } from '../shared/rectangle-background/rec
 import { BookNamesComponent } from '../shared/book-names/book-names.component';
 import { ActivatedRoute } from '@angular/router';
 import { DefaultButtonComponent } from '../shared/default-button/default-button.component';
+import { readingBook } from '../../shapes/shapes';
 
 @Component({
   selector: 'app-reading',
@@ -15,15 +16,18 @@ import { DefaultButtonComponent } from '../shared/default-button/default-button.
   styleUrl: './reading.component.css'
 })
 export class ReadingComponent {
-  bookName: string | null = "";
-  author: string | null = "Anonimo";
-  text: string = "Texto";
   
+  book: readingBook = {
+    name: "",
+    author: "",
+    text: ""
+  }
+
   constructor(
     private activedRoute: ActivatedRoute
   ) {
     activedRoute.paramMap.subscribe(params => {
-      this.bookName = params.get("name");
+      //this.bookName = params.get("name");
     });
   }
 }

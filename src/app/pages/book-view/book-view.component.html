@@ -8,8 +8,8 @@
         <div class="container_title">
 
             <app-book-names
-                [bookName]="bookName!"
-                [author]="author!"
+                [bookName]="book.name"
+                [author]="book.author"
             ></app-book-names>
 
         </div>
@@ -34,8 +34,8 @@
             <div class="container_categorie_categories">
 
                 <app-category
-                    *ngFor="let category of [1,2,3,4,5]"
-                    text="category"
+                    *ngFor="let category of book.categories"
+                    text="category]"
                 ></app-category>
 
             </div>
@@ -57,9 +57,9 @@
                 height="fit-content"
             >
 
-                <app-chapter *ngFor="let chapter of [1,2,3,4,5]; let i = index"
-                    text="Capitulo {{i+1}}: Capitulo"
-                    [routerLink]="['/book/' + bookName + '/' + (i+1)]"
+                <app-chapter *ngFor="let chapter of book.chapters; let i = index"
+                    text="Capitulo {{i+1}}: {{chapter}}"
+                    [routerLink]="['/book/' + book.name + '/' + (i+1)]"
                 ></app-chapter>
 
             </app-rectangle-background>

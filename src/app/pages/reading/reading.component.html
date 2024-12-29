@@ -8,8 +8,8 @@
         <div class="container_title">
 
             <app-book-names
-                [bookName]="bookName!"
-                [author]="author!"
+                [bookName]="book.name"
+                [author]="book.author"
             ></app-book-names>
 
         </div>
@@ -23,7 +23,7 @@
 
                 <div class="container_text_p">
 
-                    <p>{{text}}</p>
+                    <p>{{book.text}}</p>
 
                 </div>
 

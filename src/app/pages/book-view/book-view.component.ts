@@ -6,6 +6,7 @@ import { ChapterComponent } from './chapter/chapter.component';
 import { ImgComponent } from './img/img.component';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { BookNamesComponent } from '../shared/book-names/book-names.component';
+import { viewBook } from '../../shapes/shapes';
 
 @Component({
   selector: 'app-book-view',
@@ -22,17 +23,21 @@ import { BookNamesComponent } from '../shared/book-names/book-names.component';
   styleUrl: './book-view.component.css'
 })
 export class BookViewComponent {
-  @Input()
-  categories: string[] = [""];
   fav: boolean = false;
-  bookName: string | null = "";
-  author: string | null = "Anonimo";
+
+  book: viewBook = {
+    name: "",
+    author: "",
+    categories: [],
+    description: "",
+    chapters: []
+  }
 
   constructor(
     private activedRoute: ActivatedRoute
   ) {
     activedRoute.paramMap.subscribe(params => {
-      this.bookName = params.get("name");
+      //this.bookName = params.get("name");
     });
   }
 }

@@ -34,12 +34,14 @@
                 width="100px"
                 height="30px"
                 text="Histórias"
+                (click)="switchToMyBooks()"
             ></app-default-button>
 
             <app-default-button
                 width="100px"
                 height="30px"
                 text="Favoritos"
+                (click)="switchToFavoriteBooks()"
             ></app-default-button>
 
         </div>
@@ -51,9 +53,26 @@
                 height="fit-content"
             >
 
-                <div class="container_stories_components">
+                <div
+                    [ngSwitch]="list"
+                    class="container_stories_components"
+                >
 
-                    <app-book *ngFor="let x of [1,1,1,1]"></app-book>
+                    <div
+                        *ngSwitchCase="false"
+                        class="container_stories_components_list">
+                        
+                        <app-book *ngFor="let book of myBooks"></app-book>
+
+                    </div>
+
+                    <div
+                        *ngSwitchCase="true"
+                        class="container_stories_components_favorite">
+                        
+                        <app-book *ngFor="let x of favoriteBooks"></app-book>
+
+                    </div>
 
                 </div>
 
