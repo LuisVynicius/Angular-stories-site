@@ -65,3 +65,29 @@
 .container_right_img > img{
     border-radius: 50%;
 }
+
+.menu {
+    background: rgb(219,79,209);
+    background: radial-gradient(circle, rgba(219,79,209,1) 0%, rgba(108,57,139,1) 100%);
+    
+    height: 100vh;
+    width: 250px;
+    right: 0px;
+    
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+
+    padding-top: 15px;
+}
+
+.menu_img > img {
+    border-radius: 50%;
+}
+
+.menu_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}

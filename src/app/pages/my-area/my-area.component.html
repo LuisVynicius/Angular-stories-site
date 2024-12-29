@@ -1,0 +1,84 @@
+<div class="container">
+
+    <div class="container_text">
+
+        <h1>Minha área</h1>
+
+    </div>
+    
+    <div
+        [ngSwitch]="page"
+        class="container_pages"
+    >
+
+        <div
+            *ngSwitchCase="false"
+            class="container_pages_book"
+        >
+
+            <app-rectangle-background
+                width="1100px"
+                height="fit-content"
+            >
+
+                <div class="container_pages_book_stories">
+
+                    <div class="container_pages_book_stories_button">
+
+                        <app-default-button
+                            text="Adicionar história"
+                            width="150px"
+                            height="20px"
+                        ></app-default-button>
+
+                    </div>
+
+                    <div class="container_pages_book_stories_stories">
+
+                        <app-item-rectangle *ngFor="let x of [1,2,3,4]"></app-item-rectangle>
+
+                    </div>
+
+                </div>
+
+            </app-rectangle-background>
+
+        </div>
+
+        <div
+            *ngSwitchCase="true"
+            class="container_pages_chapter"
+        >
+
+            <app-rectangle-background
+                width="1100px"
+                height="fit-content"
+            >
+
+                <div class="container_pages_chapter_chapters">
+
+                    <div class="container_pages_chapter_chapters_button">
+
+                        <app-default-button
+                            text="Adicionar capítulo"
+                            width="150px"
+                            height="20px"
+                        ></app-default-button>
+
+                    </div>
+
+                    <div class="container_pages_chapter_chapters_chapters">
+
+                        <app-item-rectangle *ngFor="let x of [1,2,3,4]"></app-item-rectangle>
+
+                    </div>
+
+                </div>
+
+            </app-rectangle-background>
+
+        </div>
+
+    </div>
+
+</div>

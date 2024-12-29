@@ -1,0 +1,41 @@
+.container {
+    width: 800px;
+    height: 25px;   
+    background: rgb(219,79,209);
+    background: radial-gradient(circle, rgba(219,79,209,0.57) 0%, rgba(108,57,139,1) 100%);
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    padding: 2px 0px 2px 10px;
+
+    position: relative;
+}
+
+.container:hover {
+    background: rgba(219, 79, 210, 0.507);
+    background: radial-gradient(circle, rgba(219, 79, 210, 0.242) 0%, rgba(108,57,139,1) 100%);
+}
+
+.container:active {
+    position: relative;
+    top: 1px;
+
+    background: rgba(219, 79, 210, 0.253);
+    background: radial-gradient(circle, rgba(219, 79, 210, 0.016) 0%, rgba(108,57,139,1) 100%);
+}
+
+.container_left > h1 {
+    font-size: 17px;
+}
+
+.container_right {
+    z-index: 100;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+
+    display: flex;
+    align-items: center;
+}

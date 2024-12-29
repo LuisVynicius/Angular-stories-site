@@ -4,6 +4,7 @@ import { BooksComponent } from './pages/books/books.component';
 import { BookViewComponent } from './pages/book-view/book-view.component';
 import { ReadingComponent } from './pages/reading/reading.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { MyAreaComponent } from './pages/my-area/my-area.component';
 
 export const routes: Routes = [
     {
@@ -29,6 +30,11 @@ export const routes: Routes = [
     {
         path: 'profile/:name',
         component: ProfileComponent,
+        pathMatch: 'full'
+    },
+    {
+        path: 'my-area',
+        component: MyAreaComponent,
         pathMatch: 'full'
     },
     {

@@ -37,11 +37,47 @@
 
         </div>
 
-        <div class="container_right_menu">
+        <div
+            (click)="switchMenu()"
+            class="container_right_menu"
+        >
 
             <app-menu-button></app-menu-button>
 
         </div>
+
+    </div>
+
+</div>
+
+<div
+    *ngIf="menu"
+    class="menu"
+>
+
+    <div class="menu_img">
+
+        <img 
+            src="gojo.jpeg"
+            alt=""
+            width="150px"
+        >
+
+    </div>
+
+    <div class="menu_buttons">
+
+        <app-default-button
+            text="Minha área"
+            width="200px"
+            height="20px"
+        ></app-default-button>
+
+        <app-default-button
+            text="Desconectar"
+            width="200px"
+            height="20px"
+        ></app-default-button>
 
     </div>
 
