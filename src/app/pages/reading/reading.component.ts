@@ -3,7 +3,7 @@ import { RectangleBackgroundComponent } from '../shared/rectangle-background/rec
 import { BookNamesComponent } from '../shared/book-names/book-names.component';
 import { ActivatedRoute } from '@angular/router';
 import { DefaultButtonComponent } from '../shared/default-button/default-button.component';
-import { readingBook } from '../../shapes/shapes';
+import { ReadingBook } from '../../shapes/shapes';
 
 @Component({
   selector: 'app-reading',
@@ -17,7 +17,7 @@ import { readingBook } from '../../shapes/shapes';
 })
 export class ReadingComponent {
   
-  book: readingBook = {
+  book: ReadingBook = {
     name: "",
     author: "Mevy",
     text: "História muito daora"

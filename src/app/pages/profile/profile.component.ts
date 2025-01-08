@@ -3,7 +3,7 @@ import { RectangleBackgroundComponent } from '../shared/rectangle-background/rec
 import { DefaultButtonComponent } from '../shared/default-button/default-button.component';
 import { BookComponent } from '../shared/book/book.component';
 import { CommonModule } from '@angular/common';
-import { cardBook } from '../../shapes/shapes';
+import { CardBook } from '../../shapes/shapes';
 
 @Component({
   selector: 'app-profile',
@@ -20,8 +20,8 @@ export class ProfileComponent {
   name: string = "Mevy";
   list: boolean = false;
 
-  myBooks: cardBook[] = [];
-  favoriteBooks: cardBook[] = [];
+  myBooks: CardBook[] = [];
+  favoriteBooks: CardBook[] = [];
 
   switchToMyBooks() {
     this.list = false;

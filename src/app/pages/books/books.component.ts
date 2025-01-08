@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RectangleBackgroundComponent } from '../shared/rectangle-background/rectangle-background.component';
 import { BookComponent } from '../shared/book/book.component';
 import { CommonModule } from '@angular/common';
-import { cardBook } from '../../shapes/shapes';
+import { CardBook } from '../../shapes/shapes';
 import { HttpClient } from '@angular/common/http';
 import { enviroment } from '../../config/environment';
 
@@ -17,7 +17,7 @@ import { enviroment } from '../../config/environment';
   styleUrl: './books.component.css'
 })
 export class BooksComponent implements OnInit {
-  books: cardBook[] = [];
+  books: CardBook[] = [];
   constructor(
     private http: HttpClient
   ) {
@@ -27,7 +27,7 @@ export class BooksComponent implements OnInit {
     let result = this.http.get(enviroment.apiUrl + "/book/recents")
     result.subscribe({
       next: (data) => {
-        this.books = data as cardBook[];
+        this.books = data as CardBook[];
       },
       error: (err) => alert("Deu erro")
     });

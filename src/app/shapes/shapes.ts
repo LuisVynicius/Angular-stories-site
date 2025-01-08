@@ -1,4 +1,4 @@
-export type cardBook = {
+export type CardBook = {
     name: string,
     author: string,
     quantity: number,
@@ -7,7 +7,7 @@ export type cardBook = {
     description: string
 };
 
-export type viewBook = {
+export type ViewBook = {
     name: string,
     author: string,
     categories: string[],
@@ -17,7 +17,7 @@ export type viewBook = {
     chapters: string[]
 }
 
-export type readingBook = {
+export type ReadingBook = {
     name: string,
     author: string,
     text: string
