@@ -1,0 +1,48 @@
+textarea {
+    border-radius: 15px;
+    width: 300px;
+
+    margin: 3px 0px 3px 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 350px;
+
+    padding: 5px 0px 5px 0px;
+
+    border-radius: 20px;
+
+    background: rgb(219,79,209);
+    background: radial-gradient(circle, rgba(219,79,209,1) 0%, rgba(108,57,139,1) 100%);
+}
+
+.container_name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_name > textarea {
+    text-align: center;
+    height: 18px;
+}
+
+.container_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_description > textarea {
+    padding-top: 2px;
+    padding-left: 5px;
+    height: 150px;
+
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,12 +1,18 @@
 <div class="container">
 
-    <div class="container_title">
+    <div
+        [routerLink]="['/book/' + bookName]"
+        class="container_title"
+    >
 
         <h1>{{bookName}}</h1>
         
     </div>
 
-    <div class="container_author">
+    <div
+        [routerLink]="['/profile/' + author]"
+        class="container_author"
+    >
 
         <h3>Escritor: {{author}}</h3>
         

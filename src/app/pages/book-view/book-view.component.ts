@@ -27,17 +27,19 @@ export class BookViewComponent {
 
   book: viewBook = {
     name: "",
-    author: "",
-    categories: [],
-    description: "",
-    chapters: []
+    author: "author",
+    creationDate: "14/12/2004",
+    updatedDate: "15/12/2004",
+    categories: ['1', '2'],
+    description: "description",
+    chapters: ['cheguei', 'to aqui', 'fui']
   }
 
   constructor(
     private activedRoute: ActivatedRoute
   ) {
     activedRoute.paramMap.subscribe(params => {
-      //this.bookName = params.get("name");
+      this.book.name = params.get("name")!;
     });
   }
 }

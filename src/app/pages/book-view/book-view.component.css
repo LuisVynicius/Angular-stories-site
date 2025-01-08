@@ -19,6 +19,14 @@ hr {
     justify-content: center;
 }
 
+.container_date {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    color: white;
+}
+
 .container_categorie {
     margin-top: 5px;
 }

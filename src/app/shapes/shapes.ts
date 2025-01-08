@@ -11,6 +11,8 @@ export type viewBook = {
     name: string,
     author: string,
     categories: string[],
+    creationDate: string,
+    updatedDate: string,
     description: string,
     chapters: string[]
 }

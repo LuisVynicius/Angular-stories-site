@@ -3,6 +3,7 @@ import { RectangleBackgroundComponent } from '../shared/rectangle-background/rec
 import { DefaultButtonComponent } from '../shared/default-button/default-button.component';
 import { ItemRectangleComponent } from "./item-rectangle/item-rectangle.component";
 import { CommonModule } from '@angular/common';
+import { TextBoxComponent } from './text-box/text-box.component';
 
 @Component({
   selector: 'app-my-area',
@@ -10,6 +11,7 @@ import { CommonModule } from '@angular/common';
     RectangleBackgroundComponent,
     DefaultButtonComponent,
     ItemRectangleComponent,
+    TextBoxComponent,
     CommonModule
 ],
   templateUrl: './my-area.component.html',

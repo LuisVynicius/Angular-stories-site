@@ -23,6 +23,30 @@
 
         </div>
 
+        <div class="container_date">
+
+            <div class="container_date_creation">
+
+                <div class="container_date_creation_text">
+
+                    <span>Criado em: {{book.creationDate}}</span>
+
+                </div>
+
+            </div>
+
+            <div class="container_date_updated">
+
+                <div class="container_date_updated_text">
+
+                    <span>Atualizado em: {{book.updatedDate}}</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
         <div class="container_categorie">
 
             <div class="container_categorie_text">
@@ -35,7 +59,7 @@
 
                 <app-category
                     *ngFor="let category of book.categories"
-                    text="category]"
+                    [text]="category"
                 ></app-category>
 
             </div>
