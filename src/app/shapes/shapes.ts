@@ -1,8 +1,8 @@
-export type fullBook = {
+export type cardBook = {
     name: string,
     author: string,
     quantity: number,
-    data: string,
+    updatedDate: string,    
     categories: string[],
     description: string
 };

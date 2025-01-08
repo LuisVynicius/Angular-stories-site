@@ -18,5 +18,5 @@ import { TextBoxComponent } from './text-box/text-box.component';
   styleUrl: './my-area.component.css'
 })
 export class MyAreaComponent {
-  page: boolean = false;
+  page: boolean = true;
 }

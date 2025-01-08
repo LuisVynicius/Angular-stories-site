@@ -19,15 +19,15 @@ export class ReadingComponent {
   
   book: readingBook = {
     name: "",
-    author: "",
-    text: ""
+    author: "Mevy",
+    text: "História muito daora"
   }
 
   constructor(
     private activedRoute: ActivatedRoute
   ) {
     activedRoute.paramMap.subscribe(params => {
-      //this.bookName = params.get("name");
+      this.book.name = params.get("name")!;
     });
   }
 }
