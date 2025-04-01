@@ -20,7 +20,7 @@ span:active {
     align-items: center;
 }
 
-.container_login_input {
+.container_input {
     display: flex;
     flex-direction: column;
 
@@ -29,19 +29,6 @@ span:active {
     margin-bottom: 4px;
 }
 
-.container_login_text {
-    margin-bottom: 4px;
-}
-
-.container_register_input {
-    display: flex;
-    flex-direction: column;
-
-    gap: 8px;
-
-    margin-bottom: 4px;
-}
-
-.container_register_text {
+.container_text {
     margin-bottom: 4px;
 }

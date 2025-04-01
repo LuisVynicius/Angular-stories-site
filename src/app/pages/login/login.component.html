@@ -1,51 +1,6 @@
-<div
-    class="container"
-    [ngSwitch]="hasAccount"   
->
+<div class="container">
 
-    <div
-        class="container_login"
-        *ngSwitchCase="true" 
-    >
-
-        <app-rectangle-background
-            width="350px"
-            height="140px"
-            display="flex"
-            justifyContent="center"
-        >
-            
-            <div class="container_login_input">
-
-                <app-input-box text="Username"></app-input-box>
-                <app-input-box text="Senha"></app-input-box>
-                
-            </div>
-
-            <div class="container_login_text">
-
-                <span (click)="switchAccount()">Não possuo uma conta</span>
-
-            </div>
-
-            <div class="container_login_button">
-
-                <app-default-button
-                    width="75px"
-                    height="25px"
-                    text="Login"
-                ></app-default-button>
-
-            </div>
-
-        </app-rectangle-background>
-
-    </div>
-
-    <div
-        class="container_register" 
-        *ngSwitchCase="false"
-    >
+    <div class="container_register">
 
         <app-rectangle-background
             width="350px"
@@ -54,26 +9,50 @@
             justifyContent="center"
         >
 
-            <div class="container_register_input">
+            <div class="container_input">
 
-                <app-input-box text="Username"></app-input-box>
-                <app-input-box text="Email"></app-input-box>
-                <app-input-box text="Senha"></app-input-box>
+                <app-input-box
+                    text="Username"
+                    [(value)]="username"
+                ></app-input-box>
+                <app-input-box
+                    text="Email"
+                    [(value)]="email"
+                    *ngIf="!hasAccount"
+                ></app-input-box>
+                <app-input-box
+                    text="Senha"
+                    type="password"
+                    [(value)]="password"
+                ></app-input-box>
                 
             </div>
 
-            <div class="container_register_text">
+            <div class="container_text">
 
-                <span (click)="switchAccount()">Já possuo uma conta</span>
+                <span (click)="switchAccount()">{{hasAccountMessage}}</span>
 
             </div>
 
-            <div class="container_register_button">
+            <div 
+                class="container_button"
+                [ngSwitch]="hasAccount"
+            >
 
                 <app-default-button
                     width="100px"
                     height="25px"
                     text="Registrar"
+                    (click)="register()"
+                    *ngSwitchCase="false"
+                ></app-default-button>
+
+                <app-default-button
+                    width="100px"
+                    height="25px"
+                    text="Login"
+                    (click)="login()"
+                    *ngSwitchCase="true"
                 ></app-default-button>
 
             </div>
