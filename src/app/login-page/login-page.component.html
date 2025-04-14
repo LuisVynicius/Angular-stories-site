@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="container_name">
+        <h1>Metales</h1>
+    </div>
+    <div class="container_rectangle">
+        <div [ngSwitch]="hasAccount" class="container_rectangle_rl">
+            <div *ngSwitchCase="false" class="container_rectangle_register">
+                <div class="container_rectangle_register_input">
+                    <app-input text="Username"></app-input>
+                    <app-input text="Email"></app-input>
+                    <app-input text="Senha"></app-input>
+                    <app-input text="Confirme sua senha"></app-input>
+                </div>
+            </div>
+            <div *ngSwitchCase="true" class="container_rectangle_login">
+                <app-input text="Email"></app-input>
+                <app-input text="Senha"></app-input>
+            </div>
+        </div>   
+        <div [ngSwitch]="hasAccount" class="container_rectangle_bottom">
+            <div *ngSwitchCase="false" class="container_rectangle_bottom_register">
+                <div class="container_rectangle_bottom_register_text">
+                    <span (click)="switchHasAccount()">Já possuo uma conta</span>
+                </div>
+                <div class="container_rectangle_bottom_register_button">
+                    <app-button (click)="register()" text="Registrar"></app-button>
+                </div>
+            </div>
+            <div *ngSwitchCase="true" class="container_rectangle_bottom_login">
+                <div class="container_rectangle_bottom_login_text">
+                    <span (click)="switchHasAccount()">Não possuo uma conta</span>
+                </div>
+                <div class="container_rectangle_bottom_login_button">
+                    <app-button text="Login"></app-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

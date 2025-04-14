@@ -1,0 +1,22 @@
+.container {
+    width: 100px;
+    height:25px;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: #666262;
+    
+    user-select: none;
+    cursor: pointer;
+}
+
+.container:active {
+    position: relative;
+    top: 1px;
+
+    background-color: #4c4949;
+}
