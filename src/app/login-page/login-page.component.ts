@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../shared/button/button.component';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { BackgroundRectangleComponent } from '../shared/background-rectangle/background-rectangle.component';
 
 @Component({
   selector: 'app-login-page',
   imports: [
     InputComponent,
     ButtonComponent,
+    BackgroundRectangleComponent,
     CommonModule,
     FormsModule
   ],
