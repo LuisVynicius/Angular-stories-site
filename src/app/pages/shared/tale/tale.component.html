@@ -1,0 +1,79 @@
+<div class="container">
+
+    <div class="container_left">
+
+        <img 
+            src="bread.jpg"
+            alt=""
+            width="180px"
+            height="100%"
+        >
+
+    </div>
+
+    <div class="container_right">
+
+        <div class="container_right_top">
+
+            <div class="container_right_top_title">
+
+                <a>{{title}}</a>
+
+            </div>
+
+            <div class="container_right_top_subtitle">
+
+                <a>{{subtitle}}</a>
+
+            </div>
+
+        </div>
+
+        <div class="container_right_line">
+
+            <hr>
+
+        </div>
+
+        <div class="container_right_bottom">
+
+            <div class="container_right_bottom_informations">
+
+                <div class="container_right_bottom_informations_qd">
+
+                    <span>Quantidade de capitulos: {{quantity}}</span>
+
+                    <span>Data de atualização: {{date}}</span>
+
+                </div>
+
+                <div class="container_right_bottom_informations_likes">
+
+                    <img
+                        src=""
+                        alt="asd"
+                    >
+
+                    <span>{{likes}}</span>
+
+                </div>
+
+            </div>
+
+            <div class="container_right_bottom_categories">
+
+                <app-category [text]="category" *ngFor="let category of categories"></app-category>
+                
+            </div>
+
+            <div class="container_right_bottom_description">
+
+                <span>{{description}}</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

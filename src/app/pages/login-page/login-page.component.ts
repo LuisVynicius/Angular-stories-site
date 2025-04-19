@@ -5,6 +5,7 @@ import { ButtonComponent } from '../shared/button/button.component';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BackgroundRectangleComponent } from '../shared/background-rectangle/background-rectangle.component';
+import { apiUrl } from '../../configs/environment';
 
 @Component({
   selector: 'app-login-page',
@@ -46,7 +47,7 @@ export class LoginPageComponent {
       return;
     }
 
-    this.http.post("http://localhost:8080/user/register", {
+    this.http.post(apiUrl + "/user/register", {
       "username": this.username,
       "email": this.email,
       "password": this.password
@@ -62,7 +63,7 @@ export class LoginPageComponent {
   }
 
   login() {
-    this.http.post("http://localhost:8080/login", {
+    this.http.post(apiUrl + "/login", {
       "username": this.email,
       "password": this.password
     }, {observe: 'response'}).subscribe({

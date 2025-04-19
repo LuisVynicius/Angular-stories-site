@@ -14,4 +14,16 @@ export class BackgroundRectangleComponent {
   @Input()
   width: string = "";
 
+  @Input()
+  display: string = "";
+
+  @Input()
+  justifyContent: string = "";
+
+  @Input()
+  flexWrap: string = "";
+
+  @Input()
+  flexDirection: string = "";
+
 }

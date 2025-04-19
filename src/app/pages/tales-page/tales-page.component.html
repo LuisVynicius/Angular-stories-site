@@ -1,0 +1,23 @@
+<div class="container">
+
+    <app-background-rectangle
+        width="1300px"
+        display="flex"
+        flexDirection="row"
+        flexWrap="wrap"
+    >
+
+        <app-tale
+            *ngFor="let tale of tales"
+            [title]="tale.title"
+            [subtitle]="tale.author"
+            [quantity]="tale.chaptersQuantity"
+            [date]="tale.date"
+            [likes]="tale.likeQuantity"
+            [categories]="tale.categories"
+            [description]="tale.description"
+        ></app-tale>
+
+    </app-background-rectangle>
+
+</div>
