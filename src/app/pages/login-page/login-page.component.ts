@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { InputComponent } from './input/input.component';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../shared/button/button.component';
-import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BackgroundRectangleComponent } from '../shared/background-rectangle/background-rectangle.component';
 import { LoginServiceService } from '../../services/login.service';
 import { login, register } from '../../shapes/authentication';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -29,8 +29,8 @@ export class LoginPageComponent {
   validPassword: string = "";
 
   constructor(
-    private http: HttpClient,
-    private loginService: LoginServiceService
+    private loginService: LoginServiceService,
+    private router: Router
   ) {
 
   }
@@ -75,7 +75,19 @@ export class LoginPageComponent {
       password: this.password
     };
 
-    this.loginService.login(loginEntity);
+    this.loginService.login(loginEntity).subscribe({
+      next: (success) => {
+        if (success) {
+          this.router.navigate(['/tales']);
+        } else {
+          alert("Login falhou. Token não recebido.");
+        }
+      },
+      error: (err) => {
+        console.error("Erro ao fazer login:", err);
+        alert("Credenciais inválidas ou erro de conexão.");
+      }
+    });
 
   }
 }

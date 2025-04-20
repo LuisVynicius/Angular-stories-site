@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { login, register } from '../shapes/authentication';
 import { apiUrl } from '../configs/environment';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,21 +23,23 @@ export class LoginServiceService {
 
   }
 
-  login(login: login) {
+  login(login: login): Observable<boolean> {
 
-    this.http.post(apiUrl + "/login", {
+    return this.http.post(apiUrl + "/login", {
       "username": login.email,
       "password": login.password
-    }, {observe: 'response'}).subscribe({
-      next: (response) => {
+    }, { observe: 'response' }).pipe(
+      map(response => {
         const token: string = response.headers.get("Authorization") || "";
-        localStorage.setItem("token", token);
-      },
-      error: (err) => {
-        // TODO
-        console.error("Deu erro", err);
-      }
-    });
+
+        if (token) {
+          localStorage.setItem("token", token);
+          return true;
+        }
+
+        return false;
+      })
+    );
 
   }
 

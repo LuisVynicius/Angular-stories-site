@@ -16,7 +16,6 @@ export const authGuard: CanActivateFn = (route, state) => {
     }),
     catchError(() => {
       localStorage.removeItem("token");
-      console.log("Caiu aqui");
       return of(router.parseUrl('/login'));
     })
   );
