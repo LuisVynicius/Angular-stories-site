@@ -2,7 +2,9 @@ export type tale = {
     title: string,
     author: string,
     chaptersQuantity: number,
-    date: string,
+    creationDate: string,
+    updatedDate: string,
+    status: string,
     likeQuantity: string
     categories: string[],
     description: string

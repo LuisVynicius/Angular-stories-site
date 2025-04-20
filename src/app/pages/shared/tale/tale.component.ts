@@ -23,7 +23,13 @@ export class TaleComponent {
   quantity: number = 0;
 
   @Input()
-  date: string = "";
+  creationDate: string = "";
+
+  @Input()
+  updatedDate: string = "";
+
+  @Input()
+  status: string = "";
 
   @Input()
   likes: string = "";
