@@ -5,7 +5,8 @@ import { ButtonComponent } from '../shared/button/button.component';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BackgroundRectangleComponent } from '../shared/background-rectangle/background-rectangle.component';
-import { apiUrl } from '../../configs/environment';
+import { LoginServiceService } from '../../services/login.service';
+import { login, register } from '../../shapes/authentication';
 
 @Component({
   selector: 'app-login-page',
@@ -27,7 +28,10 @@ export class LoginPageComponent {
   password: string = "";
   validPassword: string = "";
 
-  constructor(private http: HttpClient) {
+  constructor(
+    private http: HttpClient,
+    private loginService: LoginServiceService
+  ) {
 
   }
 
@@ -47,34 +51,31 @@ export class LoginPageComponent {
       return;
     }
 
-    this.http.post(apiUrl + "/user/register", {
-      "username": this.username,
-      "email": this.email,
-      "password": this.password
-    }).subscribe({
-      next: (response) => {
-        this.hasAccount = true;
-      },
-      error: (err) => {
-        // TODO erro
-        console.error("Deu erro", err);
-      }
-    });
-  }
+    const registerEntity: register = {
+      username: this.username,
+      email: this.email,
+      password: this.password
+    };
 
-  login() {
-    this.http.post(apiUrl + "/login", {
-      "username": this.email,
-      "password": this.password
-    }, {observe: 'response'}).subscribe({
-      next: (response) => {
-        const token: string = response.headers.get("Authorization") || "";
-        localStorage.setItem("token", token);
+    this.loginService.register(registerEntity).subscribe({
+      next: () => {
+        this.switchHasAccount();
       },
       error: (err) => {
         // TODO
-        console.error("Deu erro", err);
       }
     });
+    
+  }
+
+  login() {
+    
+    const loginEntity: login = {
+      email: this.email,
+      password: this.password
+    };
+
+    this.loginService.login(loginEntity);
+
   }
 }
