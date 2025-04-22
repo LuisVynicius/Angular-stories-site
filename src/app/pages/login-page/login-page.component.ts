@@ -84,7 +84,6 @@ export class LoginPageComponent {
         }
       },
       error: (err) => {
-        console.error("Erro ao fazer login:", err);
         alert("Credenciais inválidas ou erro de conexão.");
       }
     });
