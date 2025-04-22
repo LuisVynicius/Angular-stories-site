@@ -1,12 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { CategoryComponent } from '../category/category.component';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-tale',
   imports: [
     CategoryComponent,
-    CommonModule
+    CommonModule,
+    RouterLink
   ],
   templateUrl: './tale.component.html',
   styleUrl: './tale.component.css'

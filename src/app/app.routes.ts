@@ -19,7 +19,7 @@ export const routes: Routes = [
         ]
     },
     {
-        path: "tale",
+        path: "tales/:name",
         component: TalePageComponent
     },
     {

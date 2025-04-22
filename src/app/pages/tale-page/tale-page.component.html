@@ -1,1 +1,127 @@
-<p>tale-page works!</p>
+<div class="container">
+
+    <app-background-rectangle
+        width="1300px"
+        display="flex"
+        flexDirection="column"
+        flexWrap="wrap"
+        justifyContent="center"
+    >
+
+        <div class="container_titles">
+
+            <div class="container_titles_title">
+                
+                <a>{{tale.name}}</a>
+
+            </div>
+
+            <div class="container_titles_author">
+                
+                <a>{{tale.author}}</a>
+
+            </div>
+
+        </div>
+
+        <div class="container_image">
+
+            <img 
+                src="bread.jpg"
+                alt=""
+                width="200px"
+                height="280px"
+            >
+
+        </div>
+
+        <div class="container_informations">
+            
+            <div class="container_informations_title">
+                
+                <span>Informações</span>
+
+            </div>
+
+            <div class="container_informations_itens">
+
+                <div class="container_informations_itens_left">
+
+                    <span>Quantidade de capítulos: {{tale.chaptersQuantity}}</span>
+                    <span>Quantidade de likes: {{tale.likeQuantity}}</span>
+                    <span>Quantidade de favoritos: {{tale.favoritesQuantity}}</span>
+
+                </div>
+
+                <div class="container_informations_itens_right">
+
+                    <span>Data de criação: {{tale.creationDate}}</span>
+                    <span>Data de atualização: {{tale.updatedDate}}</span>
+                    <span>Status: {{tale.status}}</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container_categories">
+
+            <div class="container_categories_title">
+
+                <span>Categorias</span>
+
+            </div>
+
+            <div class="container_categories_list">
+                
+                <app-category
+                    *ngFor="let category of tale.categories"
+                    [text]="category" 
+                ></app-category>
+
+            </div>
+
+        </div>
+
+        <div class="container_description">
+
+            <div class="container_description_title">
+
+                <span>Descrição</span>
+
+            </div>
+
+            <div class="container_description_content">
+
+                <span>{{tale.description}}</span>
+
+            </div>
+
+        </div>
+
+        <div class="container_chapters">
+
+            <div class="container_chapters_title">
+
+                <span>Lista de capítulos</span>
+
+            </div>
+
+            <div class="container_chapters_list">
+
+                <app-chapter
+                    *ngFor="let chapter of tale.chapters; let i = index"
+                    [title]="chapter.name"
+                    [date]="chapter.date"
+                    [number]="i + 1"       
+                ></app-chapter>
+
+            </div>
+
+        </div>
+
+
+    </app-background-rectangle>
+
+</div>
