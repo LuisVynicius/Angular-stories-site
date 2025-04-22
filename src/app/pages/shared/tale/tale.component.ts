@@ -16,22 +16,16 @@ import { RouterLink } from '@angular/router';
 export class TaleComponent {
 
   @Input()
-  title: string = "";
+  name: string = "";
 
   @Input()
-  subtitle: string = "";
+  author: string = "";
 
   @Input()
   quantity: number = 0;
 
   @Input()
-  creationDate: string = "";
-
-  @Input()
   updatedDate: string = "";
-
-  @Input()
-  status: string = "";
 
   @Input()
   likes: string = "";

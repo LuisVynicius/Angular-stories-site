@@ -3,10 +3,10 @@
     <div class="container_left">
 
         <img 
-            src="bread.jpg"
+            src="imageDefault.jpeg"
             alt=""
             width="180px"
-            height="100%"
+            height="230px"
         >
 
     </div>
@@ -17,13 +17,13 @@
 
             <div class="container_right_top_title">
 
-                <a [routerLink]="[`${title}`]">{{title}}</a>
+                <a [routerLink]="[`${name}`]" >{{name}}</a>
 
             </div>
 
-            <div class="container_right_top_subtitle">
+            <div class="container_right_top_author">
 
-                <a>{{subtitle}}</a>
+                <a>{{author}}</a>
 
             </div>
 
@@ -38,45 +38,45 @@
         <div class="container_right_bottom">
 
             <div class="container_right_bottom_informations">
-
-                <div class="container_right_bottom_informations_qd">
-
-                    <span>Quantidade de capitulos: {{quantity}}</span>
-
-                    <span>Data de criação: {{creationDate}}</span>
-
+        
+                <div class="container_right_bottom_informations_content">
+        
+                    <span>Quantidade de capítulos: {{quantity}}</span>
                     <span>Data de atualização: {{updatedDate}}</span>
-
-                    <span>Status: {{status}}</span>
-
+        
                 </div>
-
+        
                 <div class="container_right_bottom_informations_likes">
-
+        
                     <img
-                        src=""
+                        src="imagedefault.jpeg"
                         alt="asd"
+                        width="10px"
+                        height="10px"
                     >
 
                     <span>{{likes}}</span>
-
+        
                 </div>
-
+        
             </div>
-
+        
             <div class="container_right_bottom_categories">
-
-                <app-category [text]="category" *ngFor="let category of categories"></app-category>
                 
-            </div>
+                <app-category
+                    *ngFor="let category of categories"
+                    [text]="category"
+                ></app-category>
 
+            </div>
+            
             <div class="container_right_bottom_description">
-
+        
                 <span>{{description}}</span>
-
+        
             </div>
-
-        </div>
+        
+        </div>        
 
     </div>
 

@@ -9,12 +9,10 @@
 
         <app-tale
             *ngFor="let tale of tales"
-            [title]="tale.title"
-            [subtitle]="tale.author"
+            [name]="tale.title"
+            [author]="tale.author"
             [quantity]="tale.chaptersQuantity"
-            [creationDate]="tale.creationDate"
             [updatedDate]="tale.updatedDate"
-            [status]="tale.status"
             [likes]="tale.likeQuantity"
             [categories]="tale.categories"
             [description]="tale.description"
