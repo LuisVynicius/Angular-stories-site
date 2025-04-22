@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { apiUrl } from '../configs/environment';
-import { tale, taleView } from '../shapes/tale';
+import { tale, taleRead, taleView } from '../shapes/tale';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -21,4 +21,7 @@ export class TalesService {
     return this.http.get<taleView>(`${apiUrl}/tales/${name}`);
   }
 
+  getChapter(name: string, chapter: number): Observable<taleRead> {
+    return this.http.get<taleRead>(`${apiUrl}/tales/${name}/${chapter}`);
+  }
 }

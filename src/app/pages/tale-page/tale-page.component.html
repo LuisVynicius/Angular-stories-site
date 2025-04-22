@@ -112,11 +112,12 @@
 
                 <app-chapter
                     *ngFor="let chapter of tale.chapters; let i = index"
-                    [title]="chapter.name"
+                    [name]="chapter.name"
+                    [bookName]="tale.name"
                     [date]="chapter.date"
                     [number]="i + 1"       
                 ></app-chapter>
-
+                
             </div>
 
         </div>

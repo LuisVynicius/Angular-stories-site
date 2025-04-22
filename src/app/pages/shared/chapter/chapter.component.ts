@@ -13,7 +13,10 @@ import { Router, RouterLink } from '@angular/router';
 export class ChapterComponent {
 
   @Input()
-  title: string = "";
+  name: string = "";
+
+  @Input()
+  bookName: string = "";
 
   @Input()
   date: string = "";
@@ -28,7 +31,7 @@ export class ChapterComponent {
   }
 
   toChapter() {
-    this.router.navigate([`/${this.number}`]);
+    this.router.navigate([`/tales/${this.bookName}/${this.number}`]);
   }
 
 }

@@ -36,9 +36,9 @@ export class TalePageComponent implements OnInit{
 
   constructor(
     private talesService: TalesService,
-    activedRoute: ActivatedRoute
+    activatedRoute: ActivatedRoute
   ) {
-    activedRoute.paramMap.subscribe(params => {
+    activatedRoute.paramMap.subscribe(params => {
       this.tale.name = params.get("name")!;
     })
   }

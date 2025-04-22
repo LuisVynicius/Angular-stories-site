@@ -1,0 +1,66 @@
+<div class="container">
+    
+    <app-background-rectangle
+        width="1300px"
+        display="flex"
+        flexDirection="column"
+        flexWrap="wrap"
+    >
+
+        <div class="container_titles">
+
+            <div class="container_titles_title">
+                
+                <a>{{tale.name}}</a>
+
+            </div>
+
+            <div class="container_titles_author">
+                
+                <a>{{tale.author}}</a>
+
+            </div>
+
+            <div class="container_titles_chapter">
+
+                <span>Capitulo {{number}}: {{tale.chapterName}}</span>
+
+            </div>
+
+        </div>
+
+        <div class="container_background">
+
+            <div class="container_background_text">
+
+                <span>{{tale.content}}</span>
+
+            </div>
+
+        </div>
+
+        <div class="container_buttons">
+
+            <app-chapter-button
+                text="&lt;"
+                [active]="true"
+                [pv]="-1"
+                [chapter]="number"
+                [taleName]="tale.name"
+            ></app-chapter-button>
+            
+            <app-chapter-button
+                text="&gt;"
+                [active]="true"
+                [pv]="1"
+                [chapter]="number"
+                [taleName]="tale.name"
+            >
+            </app-chapter-button>
+
+        </div>
+    
+
+    </app-background-rectangle>
+
+</div>

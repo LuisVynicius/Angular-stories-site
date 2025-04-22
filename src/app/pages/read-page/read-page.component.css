@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+
+    justify-content: center;
+}
+
+.container_titles {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.container_titles_title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.container_titles_author {
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.container_background {
+    display: flex;
+    justify-content: center;
+
+    width: 80%;
+
+    background-color: #C4C4C4;
+}
+
+.container_background_text {
+    text-align: center;
+    white-space: pre-line;
+
+    padding: 8px 0px 8px 0px;
+}
+
+.container_buttons {
+    display: flex;
+
+    justify-content: space-between;
+
+    width: 80%;
+}

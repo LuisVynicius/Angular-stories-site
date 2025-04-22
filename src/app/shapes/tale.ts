@@ -24,6 +24,13 @@ export type taleView = {
     chapters: chapters[]
 }
 
+export type taleRead = {
+    name: string,
+    author: string,
+    chapterName: string,
+    content: string
+}
+
 export type chapters = {
     name: string,
     date: string
