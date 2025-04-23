@@ -11,4 +11,7 @@ export class CategoryComponent {
   @Input()
   text: string = "";
 
+  @Input()
+  fontSize: string = "";
+
 }

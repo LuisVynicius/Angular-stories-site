@@ -1,0 +1,25 @@
+<div
+    class="container"
+    [style.justify-content]="justifyContent"
+    [style.align-items]="alignItems"
+>
+
+    <div
+        class="container_name"
+        [style.font-size]="nameSize"
+    >
+        
+        <a (click)="goTale()">{{name}}</a>
+
+    </div>
+
+    <div
+        class="container_author"
+        [style.font-size]="authorSize"
+    >
+
+        <a (click)="goChapter()">{{author}}</a>
+
+    </div>
+
+</div>

@@ -4,12 +4,14 @@ import { BackgroundRectangleComponent } from '../shared/background-rectangle/bac
 import { taleRead } from '../../shapes/tale';
 import { TalesService } from '../../services/tales.service';
 import { ChapterButtonComponent } from './chapter-button/chapter-button.component';
+import { TitlesComponent } from '../shared/titles/titles.component';
 
 @Component({
   selector: 'app-read-page',
   imports: [
     BackgroundRectangleComponent,
-    ChapterButtonComponent
+    ChapterButtonComponent,
+    TitlesComponent
   ],
   templateUrl: './read-page.component.html',
   styleUrl: './read-page.component.css'

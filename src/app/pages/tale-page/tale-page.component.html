@@ -4,60 +4,63 @@
         width="1300px"
         display="flex"
         flexDirection="column"
-        flexWrap="wrap"
         justifyContent="center"
+        flexWrap="wrap"
     >
 
-        <div class="container_titles">
+        <div class="container_tale">
 
-            <div class="container_titles_title">
-                
-                <a>{{tale.name}}</a>
+            <div class="container_left">
 
-            </div>
-
-            <div class="container_titles_author">
-                
-                <a>{{tale.author}}</a>
-
-            </div>
-
-        </div>
-
-        <div class="container_image">
-
-            <img 
-                src="imageDefault.jpeg"
-                alt=""
-                width="200px"
-                height="280px"
-            >
-
-        </div>
-
-        <div class="container_informations">
-            
-            <div class="container_informations_title">
-                
-                <span>Informações</span>
+                <img
+                    src="imageDefault.jpeg"
+                    alt=""
+                    width="200px"
+                    height="300px"
+                >
 
             </div>
 
-            <div class="container_informations_itens">
+            <div class="container_tale_right">
 
-                <div class="container_informations_itens_left">
+                <div class="container_tale_right_top">
 
-                    <span>Quantidade de capítulos: {{tale.chaptersQuantity}}</span>
-                    <span>Quantidade de likes: {{tale.likeQuantity}}</span>
-                    <span>Quantidade de favoritos: {{tale.favoritesQuantity}}</span>
+                    <app-titles
+                        [name]="tale.name"
+                        nameSize="25px"
+                        [author]="tale.author"
+                        authorSize="19px"
+                    ></app-titles>
 
                 </div>
 
-                <div class="container_informations_itens_right">
+                <div class="container_tale_right_bottom">
+                    
+                    <div class="container_tale_right_bottom_informations">
 
-                    <span>Data de criação: {{tale.creationDate}}</span>
-                    <span>Data de atualização: {{tale.updatedDate}}</span>
-                    <span>Status: {{tale.status}}</span>
+                        <div class="container_tale_right_bottom_informations_left">
+
+                            <span>Quantidade de capítulos: {{tale.chaptersQuantity}}</span>
+                            <span>Quantidade de likes: {{tale.likeQuantity}}</span>
+                            <span>Quantidade de favoritos: {{tale.favoritesQuantity}}</span>
+
+                        </div>
+
+                        <div class="container_tale_right_bottom_informations_right">
+
+                            <span>Data de criação: {{tale.creationDate}}</span>
+                            <span>Data de atualização: {{tale.updatedDate}}</span>
+                            <span>Status: {{tale.status}}</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="container_tale_right_bottom_description">
+
+                        <span>{{tale.description}}</span>
+
+                    </div>
 
                 </div>
 
@@ -67,61 +70,44 @@
 
         <div class="container_categories">
 
-            <div class="container_categories_title">
-
-                <span>Categorias</span>
-
-            </div>
-
-            <div class="container_categories_list">
-                
-                <app-category
-                    *ngFor="let category of tale.categories"
-                    [text]="category" 
-                ></app-category>
-
-            </div>
-
-        </div>
-
-        <div class="container_description">
-
-            <div class="container_description_title">
-
-                <span>Descrição</span>
-
-            </div>
-
-            <div class="container_description_content">
-
-                <span>{{tale.description}}</span>
-
-            </div>
+            <app-category
+                *ngFor="let category of tale.categories"
+                [text]="category"
+            ></app-category>
 
         </div>
 
         <div class="container_chapters">
 
-            <div class="container_chapters_title">
+            <div class="container_chapters_text">
 
                 <span>Lista de capítulos</span>
 
             </div>
 
-            <div class="container_chapters_list">
-
-                <app-chapter
-                    *ngFor="let chapter of tale.chapters; let i = index"
-                    [name]="chapter.name"
-                    [bookName]="tale.name"
-                    [date]="chapter.date"
-                    [number]="i + 1"       
-                ></app-chapter>
+            <app-background-rectangle
+                width="1100px"
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                flexWrap="wrap"
+            >
                 
-            </div>
+                <div class="container_chapters_list">
+    
+                    <app-chapter
+                        *ngFor="let chapter of tale.chapters; let i = index"
+                        [name]="chapter.name"
+                        [bookName]="tale.name"
+                        [date]="chapter.date"
+                        [number]="i + 1"   
+                    ></app-chapter>
 
+                </div>
+    
+            </app-background-rectangle>
+            
         </div>
-
 
     </app-background-rectangle>
 

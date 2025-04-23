@@ -6,6 +6,7 @@ import { TalesService } from '../../services/tales.service';
 import { ActivatedRoute } from '@angular/router';
 import { taleView } from '../../shapes/tale';
 import { ChapterComponent } from '../shared/chapter/chapter.component';
+import { TitlesComponent } from '../shared/titles/titles.component';
 
 @Component({
   selector: 'app-tale-page',
@@ -13,6 +14,7 @@ import { ChapterComponent } from '../shared/chapter/chapter.component';
     BackgroundRectangleComponent,
     CategoryComponent,
     ChapterComponent,
+    TitlesComponent,
     CommonModule
   ],
   templateUrl: './tale-page.component.html',

@@ -9,15 +9,15 @@
 
         <div class="container_titles">
 
-            <div class="container_titles_title">
-                
-                <a>{{tale.name}}</a>
+            <div class="container_titles_titles">
 
-            </div>
-
-            <div class="container_titles_author">
-                
-                <a>{{tale.author}}</a>
+                <app-titles
+                        [name]="tale.name"
+                        nameSize="25px"
+                        [author]="tale.author"
+                        authorSize="19px"
+                        alignItems="center"
+                ></app-titles>
 
             </div>
 
@@ -29,34 +29,43 @@
 
         </div>
 
-        <div class="container_background">
+        <div class="container_content">
 
-            <div class="container_background_text">
-
-                <span>{{tale.content}}</span>
-
-            </div>
-
-        </div>
-
-        <div class="container_buttons">
-
-            <app-chapter-button
-                text="&lt;"
-                [active]="true"
-                [pv]="-1"
-                [chapter]="number"
-                [taleName]="tale.name"
-            ></app-chapter-button>
-            
-            <app-chapter-button
-                text="&gt;"
-                [active]="true"
-                [pv]="1"
-                [chapter]="number"
-                [taleName]="tale.name"
+            <app-background-rectangle
+                width="1100px"
+                display="flex"
+                flexDirection="column"
+                flexWrap="wrap"
             >
-            </app-chapter-button>
+
+                <div class="container_content_text">
+    
+                    <span>{{tale.content}}</span>
+    
+                </div>
+    
+            </app-background-rectangle>
+    
+            <div class="container_buttons">
+    
+                <app-chapter-button
+                    text="&lt;"
+                    [active]="true"
+                    [pv]="-1"
+                    [chapter]="number"
+                    [taleName]="tale.name"
+                ></app-chapter-button>
+                
+                <app-chapter-button
+                    text="&gt;"
+                    [active]="true"
+                    [pv]="1"
+                    [chapter]="number"
+                    [taleName]="tale.name"
+                >
+                </app-chapter-button>
+    
+            </div>
 
         </div>
     

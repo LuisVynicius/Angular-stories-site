@@ -15,17 +15,14 @@
 
         <div class="container_right_top">
 
-            <div class="container_right_top_title">
-
-                <a [routerLink]="[`${name}`]" >{{name}}</a>
-
-            </div>
-
-            <div class="container_right_top_author">
-
-                <a>{{author}}</a>
-
-            </div>
+            <app-titles
+                [name]="name"
+                nameSize="22px"
+                [author]="author"
+                authorSize="15px"
+                justifyContent="center"
+                alignItems="center"
+            ></app-titles>
 
         </div>
 
@@ -66,6 +63,7 @@
                 <app-category
                     *ngFor="let category of categories"
                     [text]="category"
+                    fontSize="12px"
                 ></app-category>
 
             </div>
