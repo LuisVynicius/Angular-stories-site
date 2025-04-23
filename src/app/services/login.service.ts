@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { login, register } from '../shapes/authentication';
 import { apiUrl } from '../configs/environment';
@@ -41,6 +41,17 @@ export class LoginServiceService {
       })
     );
 
+  }
+
+  getNameByToken() {
+    const token: string = localStorage.getItem("token")!;
+  
+    const headers = new HttpHeaders({
+      Authorization: token
+    });
+  
+    return this.http.get<{ username: string }>(`${apiUrl}/user/username`, { headers });
+    
   }
 
 }

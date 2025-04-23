@@ -1,0 +1,91 @@
+<div class="container">
+
+    <app-background-rectangle
+        width="1300px"
+        display="flex"
+        flexDirection="column"
+        flexWrap="wrap"
+    >
+
+        <div class="container_top">
+
+            <div class="container_top_image">
+
+                <img
+                    src="userDefault.png"
+                    alt=""
+                    width="150px"
+                    height="150px"
+                >
+
+            </div>
+
+            <div class="container_top_name">
+                
+                <span>{{username}}</span>
+
+            </div>
+
+        </div>
+        
+        <div class="container_line">
+
+            <hr>
+
+        </div>
+
+        <div class="container_tales">
+
+            <div class="container_tales_buttons">
+
+                <app-button
+                    text="Histórias"
+                    (click)="toMyTales()"
+                ></app-button>
+
+                <app-button
+                    text="Favoritos"
+                    (click)="toMyFavorites()"
+                ></app-button>
+
+            </div>
+
+            <app-background-rectangle
+                width="1100px"
+                display="flex"
+                flexDirection="column"
+                flexWrap="wrap"
+                justifyContent="center"
+            >
+
+                <div class="container_tales_create">
+
+                    <app-button
+                        text="Criar história"
+                    ></app-button>
+
+                </div>
+
+                <div class="container_tales_tales">
+
+                    <app-tale
+                        *ngFor="let tale of tales"
+                        [name]="tale.title"
+                        [author]="tale.author"
+                        [quantity]="tale.chaptersQuantity"
+                        [updatedDate]="tale.updatedDate"
+                        [likes]="tale.likeQuantity"
+                        [categories]="tale.categories"
+                        [description]="tale.description"
+                    ></app-tale>
+
+                </div>
+
+            </app-background-rectangle>
+
+        </div>
+
+    </app-background-rectangle>
+
+
+</div>

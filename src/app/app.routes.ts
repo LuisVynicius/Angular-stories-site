@@ -5,6 +5,7 @@ import { TalePageComponent } from './pages/tale-page/tale-page.component';
 import { authGuard } from './guards/auth.guard';
 import { ReadPageComponent } from './pages/read-page/read-page.component';
 import { TitlesComponent } from './pages/shared/titles/titles.component';
+import { MyProfileComponent } from './pages/my-profile/my-profile.component';
 
 export const routes: Routes = [
     {
@@ -22,15 +23,21 @@ export const routes: Routes = [
     },
     {
         path: "tales/:name",
-        component: TalePageComponent,canActivate: [
+        component: TalePageComponent,
+        canActivate: [
             authGuard
         ]
     },
     {
         path: "tales/:name/:number",
-        component: ReadPageComponent,canActivate: [
+        component: ReadPageComponent,
+        canActivate: [
             authGuard
         ]
+    },
+    {
+        path: "component",
+        component: MyProfileComponent
     },
     {
         path: "**",

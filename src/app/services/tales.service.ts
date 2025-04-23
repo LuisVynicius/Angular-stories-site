@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { apiUrl } from '../configs/environment';
 import { tale, taleRead, taleView } from '../shapes/tale';
@@ -24,4 +24,26 @@ export class TalesService {
   getChapter(name: string, chapter: number): Observable<taleRead> {
     return this.http.get<taleRead>(`${apiUrl}/tales/${name}/${chapter}`);
   }
+
+  getMyTales(): Observable<tale[]> {
+    const token: string = localStorage.getItem("token")!;
+  
+    const headers = new HttpHeaders({
+      Authorization: token
+    });
+  
+    return this.http.get<tale[]>(`${apiUrl}/tales/my`, { headers });
+  }
+  
+  getMyFavorites(): Observable<tale[]> {
+    const token: string = localStorage.getItem("token")!;
+  
+    const headers = new HttpHeaders({
+      Authorization: token
+    });
+
+    return this.http.get<tale[]>(`${apiUrl}/tales/favorites`, { headers });
+  }
+  
+
 }
