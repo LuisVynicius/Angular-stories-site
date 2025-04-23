@@ -51,7 +51,6 @@ export class LoginServiceService {
     });
   
     return this.http.get<{ username: string }>(`${apiUrl}/user/username`, { headers });
-    
   }
 
 }

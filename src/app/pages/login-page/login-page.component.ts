@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { InputComponent } from './input/input.component';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../shared/button/button.component';
 import { FormsModule } from '@angular/forms';
@@ -7,6 +6,7 @@ import { BackgroundRectangleComponent } from '../shared/background-rectangle/bac
 import { LoginServiceService } from '../../services/login.service';
 import { login, register } from '../../shapes/authentication';
 import { Router } from '@angular/router';
+import { InputComponent } from '../shared/input/input.component';
 
 @Component({
   selector: 'app-login-page',

@@ -116,3 +116,10 @@
     font-size: 15px;
     text-align: center;
 }
+
+.container_right_bottom_description > span {
+    display: flex;
+    flex-wrap: wrap;
+
+    word-break: break-word;
+}

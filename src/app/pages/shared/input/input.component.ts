@@ -12,11 +12,24 @@ import { FormsModule } from '@angular/forms';
 export class InputComponent {
   @Input()
   title: string = "";
+  
   @Input()
   type: string = "";
 
   @Input()
   value: string = "";
+
+  @Input()
+  justifyContent: string = "";
+  
+  @Input()
+  alignItems: string = "";
+
+  @Input()
+  width: string = "";
+
+  @Input()
+  height: string = "";
 
   @Output()
   valueChange = new EventEmitter<string>();
@@ -25,5 +38,4 @@ export class InputComponent {
     this.value = newValue;
     this.valueChange.emit(this.value);
   }
-
 }

@@ -6,6 +6,7 @@ import { ButtonComponent } from '../shared/button/button.component';
 import { tale } from '../../shapes/tale';
 import { TalesService } from '../../services/tales.service';
 import { LoginServiceService } from '../../services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-profile',
@@ -26,7 +27,8 @@ export class MyProfileComponent implements OnInit {
 
   constructor(
     private talesService: TalesService,
-    private loginService: LoginServiceService
+    private loginService: LoginServiceService,
+    private router: Router
   ) {
 
   }
@@ -41,6 +43,7 @@ export class MyProfileComponent implements OnInit {
   }
   
   toMyTales() {
+    this.mytales = true;
     this.talesService.getMyTales().subscribe({
       next: (success) => {
         this.tales = success;    
@@ -49,11 +52,17 @@ export class MyProfileComponent implements OnInit {
   }
 
   toMyFavorites() {
+    this.mytales = false;
+
     this.talesService.getMyFavorites().subscribe({
       next: (success) => {
         this.tales = success;    
       }
     });
+  }
+
+  toCreate() {
+    this.router.navigate(['/create']);
   }
 
 }

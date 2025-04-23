@@ -45,5 +45,20 @@ export class TalesService {
     return this.http.get<tale[]>(`${apiUrl}/tales/favorites`, { headers });
   }
   
+  createTale(name: string, description: string, categories: string[]) {
+    const token: string = localStorage.getItem("token")!;
+  
+    const headers = new HttpHeaders({
+      Authorization: token
+    });
+
+    return this.http.post(`${apiUrl}/tales`, {
+        name: name,
+        description: description,
+        categories: categories
+      },
+      { headers }
+    );
+  }
 
 }

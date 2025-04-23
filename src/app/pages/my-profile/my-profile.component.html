@@ -61,7 +61,9 @@
                 <div class="container_tales_create">
 
                     <app-button
+                        *ngIf="mytales"
                         text="Criar história"
+                        (click)="toCreate()"
                     ></app-button>
 
                 </div>

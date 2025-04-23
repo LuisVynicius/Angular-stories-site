@@ -2,13 +2,21 @@
     padding: 6px 0px 3px 0px;
 }
 
+.container_title {
+    display: flex;
+    flex-direction: column;
+}
+
 .container_title > span {
     font-size: 18px;
 }
 
 .container_input > input {
     width: 180px;
-    border-radius: 5px;
-    border: 0px solid black;
     height: 20px;
+    
+    border-radius: 5px;
+    border: 1px solid black;
+
+    padding-left: 3px;
 }
