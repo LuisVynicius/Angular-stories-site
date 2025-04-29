@@ -29,6 +29,16 @@ export type taleRead = {
     content: string
 }
 
+export type taleCreate = {
+    name: string,
+    description: string,
+    categories: string[]
+}
+
+export type taleDelete = {
+    name: string
+}
+
 export type chapters = {
     name: string,
     date: string

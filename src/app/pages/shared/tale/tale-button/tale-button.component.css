@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25px;
+    height: 50%;
+
+    border: 1px solid black;
+    border-radius: 15px;
+
+    cursor: pointer;
+
+}
+
+.container:active {
+    position: relative;
+    top:1px;
+}
+
+
+.container_text {
+    font-size: 22px;
+    font-weight: bold;
+    user-select: none;
+
+    rotate: -90deg;
+}

@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { apiUrl } from '../configs/environment';
-import { tale, taleRead, taleView } from '../shapes/tale';
+import { tale, taleCreate, taleRead, taleView, taleDelete } from '../shapes/tale';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -26,39 +26,46 @@ export class TalesService {
   }
 
   getMyTales(): Observable<tale[]> {
-    const token: string = localStorage.getItem("token")!;
-  
-    const headers = new HttpHeaders({
-      Authorization: token
-    });
+    const headers = this.getHeaderToken();
   
     return this.http.get<tale[]>(`${apiUrl}/tales/my`, { headers });
   }
   
   getMyFavorites(): Observable<tale[]> {
-    const token: string = localStorage.getItem("token")!;
-  
-    const headers = new HttpHeaders({
-      Authorization: token
-    });
+    const headers = this.getHeaderToken();
 
     return this.http.get<tale[]>(`${apiUrl}/tales/favorites`, { headers });
   }
   
-  createTale(name: string, description: string, categories: string[]) {
+  createTale(tale: taleCreate) {
+    const headers = this.getHeaderToken();
+
+    return this.http.post(`${apiUrl}/tales`, tale, { headers } );
+  }
+
+  deleteTale(name: string) {
+     const headers = this.getHeaderToken();
+
+     const tale: taleDelete = {
+      name: name
+     };
+
+     return this.http.delete(`${apiUrl}/tales`, {
+      headers,
+      body: tale
+     });
+  }
+
+  private getHeaderToken() {
     const token: string = localStorage.getItem("token")!;
   
     const headers = new HttpHeaders({
       Authorization: token
     });
 
-    return this.http.post(`${apiUrl}/tales`, {
-        name: name,
-        description: description,
-        categories: categories
-      },
-      { headers }
-    );
+    return headers;
   }
+
+  
 
 }

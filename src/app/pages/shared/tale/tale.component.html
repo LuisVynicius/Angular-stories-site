@@ -79,4 +79,22 @@
 
     </div>
 
+    <div
+        *ngIf="myTale"
+        class="container_options"
+    >
+
+        <app-tale-button
+            text="Editar"
+            color="#94DFF4"
+        ></app-tale-button>
+        
+        <app-tale-button
+            text="Excluir"
+            color="#DC6565"
+            (click)="deleteTale()"
+        ></app-tale-button>
+
+    </div>
+
 </div>

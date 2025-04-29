@@ -4,6 +4,7 @@ import { InputComponent } from '../shared/input/input.component';
 import { ButtonComponent } from '../shared/button/button.component';
 import { TalesService } from '../../services/tales.service';
 import { Router } from '@angular/router';
+import { taleCreate } from '../../shapes/tale';
 
 @Component({
   selector: 'app-create-tale',
@@ -29,8 +30,13 @@ export class CreateTaleComponent {
   }
 
   create() {
-    console.log("Saiu aqui");
-    this.talesService.createTale(this.name, this.description, this.categories).subscribe({
+    const tale: taleCreate = {
+      name: this.name,
+      description: this.description,
+      categories: this.categories
+    }
+    
+    this.talesService.createTale(tale).subscribe({
       next: (success) => {
         this.router.navigate(['myProfile']);
       }
