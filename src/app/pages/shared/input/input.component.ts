@@ -31,6 +31,9 @@ export class InputComponent {
   @Input()
   height: string = "";
 
+  @Input()
+  alignText: string = "";
+
   @Output()
   valueChange = new EventEmitter<string>();
 

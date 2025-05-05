@@ -4,3 +4,17 @@
     border: 0;
     box-sizing: border-box;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container_menu {
+    position: fixed;
+    width: 100%;
+}
+
+.container_page {
+    margin-top: 70px;
+}

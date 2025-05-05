@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    position: fixed;
+    
+    justify-content: space-between;
+    align-items: center;
+
+    height: 60px;
+    width: 100%;
+    
+    padding: 20px ;
+    
+    background-color: #1e3a8a;
+    color: white;
+}
+
+.container_left > a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.container_right {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    text-align: right;
+
+    cursor: pointer;
+}
+
+.container_right:active {
+    position: relative;
+    top: 1px;
+}
