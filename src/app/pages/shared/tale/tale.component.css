@@ -5,10 +5,10 @@
     width: fit-content;
     height: 250px;
 
-    background-color: #BCBCBC;
+    background-color: #f3f4f6;
 
     border-radius: 15px;
-    border: 3px solid black;
+    border: 3px solid #d1d5db;
 }
 
 .container_left {

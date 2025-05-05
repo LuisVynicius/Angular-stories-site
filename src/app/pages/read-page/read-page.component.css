@@ -2,6 +2,8 @@
     display: flex;
 
     justify-content: center;
+
+    color: #f1f5f9;
 }
 
 .container_titles {
@@ -24,7 +26,7 @@
     text-align: center;
     white-space: pre-line;
 
-    padding: 8px 0px 8px px;
+    padding: 8px 0px 8px 0px;
 }
 
 .container_buttons {
