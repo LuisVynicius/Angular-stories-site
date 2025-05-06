@@ -7,29 +7,26 @@
         flexWrap="wrap"
     >
 
-        <div class="container_tale">
+        <div class="container_name">
 
-            <div class="container_tale_left">
+            <app-input
+                title="Nome"
+                justifyContent="center"
+                alignItems="center"
+                color="white"
+                [(value)]="name"
+            ></app-input>
 
-                <img
-                    src="imageDefault.jpeg"
-                    alt=""
-                    width="200px"
-                    height="300px"
-                >
+        </div>
 
-            </div>
+        <div class="container_image">
 
-            <div class="container_tale_right">
-
-                <app-input
-                    title="Nome"
-                    justifyContent="center"
-                    alignItems="center"
-                    [(value)]="name"
-                ></app-input>
-
-            </div>
+            <img
+                src="imageDefault.jpeg"
+                alt=""
+                width="200px"
+                height="300px"
+            >
 
         </div>
 
@@ -42,12 +39,19 @@
                 alignText="center"
                 width="1100px"
                 height="240px"
+                color="white"
                 [(value)]="description"
             ></app-input>
 
         </div>
 
-        <div class="container_button">
+        <div class="container_categories">
+
+            
+
+        </div>
+
+        <div class="container_create">
 
             <app-button
                 text="Confirmar"
