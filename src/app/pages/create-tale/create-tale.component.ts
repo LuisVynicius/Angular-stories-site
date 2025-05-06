@@ -28,7 +28,7 @@ export class CreateTaleComponent {
     private textService: TextService,
     private router: Router
   ) {
-
+    
   }
 
   create() {
@@ -46,7 +46,6 @@ export class CreateTaleComponent {
   }
 
   correctDescription() {
-    console.log("Aqui1")
     this.textService.getCorrections(this.description).subscribe({
       next: (success) => {
         if (success === "") {

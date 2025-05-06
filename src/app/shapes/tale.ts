@@ -19,7 +19,7 @@ export type taleView = {
     status: string,
     categories: string[],
     description: string,
-    chapters: chapters[]
+    chapters: chapter[]
 }
 
 export type taleRead = {
@@ -35,11 +35,37 @@ export type taleCreate = {
     categories: string[]
 }
 
+export type taleUpdateAll = {
+    id: number,
+    name: string,
+    description: string,
+    categories: string[],
+    chapters: chapter[]
+}
+
+export type taleUpdateTale = {
+    id: number,
+    name: string,
+    description: string,
+    categories: string[]
+}
+
 export type taleDelete = {
     name: string
 }
 
-export type chapters = {
+export type chapter = {
     name: string,
     date: string
+}
+
+export type chapterCreate = {
+    taleId: number,
+    name: string,
+    content: string
+}
+
+export type chapterUpdate = {
+    taleId: number,
+    chapters: chapter[]
 }

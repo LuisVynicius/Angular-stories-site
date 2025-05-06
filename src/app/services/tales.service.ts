@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { apiUrl } from '../configs/environment';
-import { tale, taleCreate, taleRead, taleView, taleDelete } from '../shapes/tale';
+import { tale, taleCreate, taleRead, taleView, taleDelete, taleUpdateTale, taleUpdateAll } from '../shapes/tale';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -22,11 +22,20 @@ export class TalesService {
   }
 
   getTale(name: string): Observable<taleView> {
-    return this.http.get<taleView>(`${apiUrl}/tales/${name}`);
+    return this.http.get<taleView>(`${apiUrl}/tales/name/${name}`);
+  }
+
+  getTaleToUpdate(name: string): Observable<taleUpdateAll> {
+    const headers = this.getHeaderToken();
+
+    return this.http.get<taleUpdateAll>(
+      `${apiUrl}/tales/upset/${name}`,
+      { headers }
+    );
   }
 
   getChapter(name: string, chapter: number): Observable<taleRead> {
-    return this.http.get<taleRead>(`${apiUrl}/tales/${name}/${chapter}`);
+    return this.http.get<taleRead>(`${apiUrl}/tales/name/${name}/${chapter}`);
   }
 
   getMyTales(): Observable<tale[]> {
@@ -47,17 +56,31 @@ export class TalesService {
     return this.http.post(`${apiUrl}/tales`, tale, { headers } );
   }
 
+  updateTale(tale: taleUpdateTale) {
+    const headers = this.getHeaderToken();
+    return this.http.put(
+      `${apiUrl}/tales`,
+      tale,
+      {
+        headers 
+      }
+    );
+  }
+
   deleteTale(name: string) {
-     const headers = this.getHeaderToken();
+    const headers = this.getHeaderToken();
 
-     const tale: taleDelete = {
+    const tale: taleDelete = {
       name: name
-     };
+    };
 
-     return this.http.delete(`${apiUrl}/tales`, {
-      headers,
-      body: tale
-     });
+    return this.http.delete(
+      `${apiUrl}/tales`,
+      {
+        headers,
+        body: tale
+      }
+    );
   }
 
   private getHeaderToken() {

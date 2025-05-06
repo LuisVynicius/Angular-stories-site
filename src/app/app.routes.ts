@@ -1,14 +1,13 @@
 import { Routes } from '@angular/router';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { TalesPageComponent } from './pages/tales-page/tales-page.component';
-import { TalePageComponent } from './pages/tale-page/tale-page.component';
 import { authGuard } from './guards/auth.guard';
-import { ReadPageComponent } from './pages/read-page/read-page.component';
-import { TitlesComponent } from './pages/shared/titles/titles.component';
-import { MyProfileComponent } from './pages/my-profile/my-profile.component';
 import { CreateTaleComponent } from './pages/create-tale/create-tale.component';
-import { MenuComponent } from './pages/shared/menu/menu.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { MyProfileComponent } from './pages/my-profile/my-profile.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { ReadPageComponent } from './pages/read-page/read-page.component';
+import { TalePageComponent } from './pages/tale-page/tale-page.component';
+import { TalesPageComponent } from './pages/tales-page/tales-page.component';
+import { UpdateTaleComponent } from './pages/update-tale/update-tale.component';
 
 export const routes: Routes = [
     {
@@ -58,7 +57,11 @@ export const routes: Routes = [
         ]   
     },
     {
+        path: "update/:name",
+        component: UpdateTaleComponent
+    },
+    {
         path: "**",
-        redirectTo: "login"
+        redirectTo: "tales"
     }
 ];

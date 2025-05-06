@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TitlesComponent } from '../titles/titles.component';
 import { TaleButtonComponent } from './tale-button/tale-button.component';
 import { TalesService } from '../../../services/tales.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tale',
@@ -19,7 +20,8 @@ import { TalesService } from '../../../services/tales.service';
 export class TaleComponent {
 
   constructor(
-    private talesService: TalesService
+    private talesService: TalesService,
+    private router: Router
   ) {
 
   }
@@ -54,6 +56,10 @@ export class TaleComponent {
         window.location.reload();
       }
     });
+  }
+
+  updateTale() {
+    this.router.navigate([`update/${this.name}`]);
   }
 
 }
