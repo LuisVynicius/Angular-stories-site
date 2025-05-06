@@ -13,6 +13,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent{
-  title = 'Metales';
+export class AppComponent {
+  logged: boolean = true;
 }

@@ -8,6 +8,7 @@ import { TitlesComponent } from './pages/shared/titles/titles.component';
 import { MyProfileComponent } from './pages/my-profile/my-profile.component';
 import { CreateTaleComponent } from './pages/create-tale/create-tale.component';
 import { MenuComponent } from './pages/shared/menu/menu.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 export const routes: Routes = [
     {
@@ -46,13 +47,15 @@ export const routes: Routes = [
         ]
     },
     {
-        path: "create",
-        component: CreateTaleComponent,
-        
+        path: "profile/:username",
+        component: ProfileComponent
     },
     {
-        path: "component",
-        component: MenuComponent
+        path: "create",
+        component: CreateTaleComponent,
+        canActivate: [
+            authGuard
+        ]   
     },
     {
         path: "**",

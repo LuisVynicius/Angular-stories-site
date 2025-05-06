@@ -17,6 +17,10 @@ export class TalesService {
     return this.http.get<tale[]>(`${apiUrl}/tales/all`);
   }
 
+  getTalesByUsername(username: string): Observable<tale[]> {
+    return this.http.get<tale[]>(`${apiUrl}/tales/all/username/${username}`);
+  }
+
   getTale(name: string): Observable<taleView> {
     return this.http.get<taleView>(`${apiUrl}/tales/${name}`);
   }

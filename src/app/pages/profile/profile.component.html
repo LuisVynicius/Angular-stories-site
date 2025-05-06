@@ -36,20 +36,6 @@
 
         <div class="container_tales">
 
-            <div class="container_tales_buttons">
-
-                <app-button
-                    text="Histórias"
-                    (click)="toMyTales()"
-                ></app-button>
-
-                <app-button
-                    text="Favoritos"
-                    (click)="toMyFavorites()"
-                ></app-button>
-
-            </div>
-
             <app-background-rectangle
                 width="1150px"
                 display="flex"
@@ -57,16 +43,6 @@
                 flexWrap="wrap"
                 justifyContent="center"
             >
-
-                <div class="container_tales_create">
-
-                    <app-button
-                        *ngIf="mytales"
-                        text="Criar história"
-                        (click)="toCreate()"
-                    ></app-button>
-
-                </div>
 
                 <div class="container_tales_tales">
 
@@ -79,7 +55,7 @@
                         [likes]="tale.likeQuantity"
                         [categories]="tale.categories"
                         [description]="tale.description"
-                        [myTale]="mytales"
+                        [myTale]="false"
                     ></app-tale>
 
                 </div>

@@ -37,8 +37,8 @@ export class TitlesComponent {
     this.router.navigate([`tales/${this.name}`]);
   }
 
-  goChapter() {
-    
+  goProfile() {
+    this.router.navigate([`profile/${this.author}`]);
   }
 
 }

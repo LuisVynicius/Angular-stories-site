@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../shared/button/button.component';
 import { FormsModule } from '@angular/forms';
 import { BackgroundRectangleComponent } from '../shared/background-rectangle/background-rectangle.component';
-import { LoginServiceService } from '../../services/login.service';
+import { LoginService } from '../../services/login.service';
 import { login, register } from '../../shapes/authentication';
 import { Router } from '@angular/router';
 import { InputComponent } from '../shared/input/input.component';
@@ -29,7 +29,7 @@ export class LoginPageComponent {
   validPassword: string = "";
 
   constructor(
-    private loginService: LoginServiceService,
+    private loginService: LoginService,
     private router: Router
   ) {
 

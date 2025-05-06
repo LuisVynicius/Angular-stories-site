@@ -5,7 +5,7 @@ import { BackgroundRectangleComponent } from '../shared/background-rectangle/bac
 import { ButtonComponent } from '../shared/button/button.component';
 import { tale } from '../../shapes/tale';
 import { TalesService } from '../../services/tales.service';
-import { LoginServiceService } from '../../services/login.service';
+import { LoginService } from '../../services/login.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -27,7 +27,7 @@ export class MyProfileComponent implements OnInit {
 
   constructor(
     private talesService: TalesService,
-    private loginService: LoginServiceService,
+    private loginService: LoginService,
     private router: Router
   ) {
 

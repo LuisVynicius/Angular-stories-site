@@ -34,6 +34,9 @@ export class InputComponent {
   @Input()
   alignText: string = "";
 
+  @Input()
+  color: string = "black";
+
   @Output()
   valueChange = new EventEmitter<string>();
 
