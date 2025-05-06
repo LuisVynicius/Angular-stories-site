@@ -5,6 +5,7 @@ import { ButtonComponent } from '../shared/button/button.component';
 import { TalesService } from '../../services/tales.service';
 import { Router } from '@angular/router';
 import { taleCreate } from '../../shapes/tale';
+import { TextService } from '../../services/text.service';
 
 @Component({
   selector: 'app-create-tale',
@@ -24,6 +25,7 @@ export class CreateTaleComponent {
 
   constructor(
     private talesService: TalesService,
+    private textService: TextService,
     private router: Router
   ) {
 
@@ -39,6 +41,19 @@ export class CreateTaleComponent {
     this.talesService.createTale(tale).subscribe({
       next: (success) => {
         this.router.navigate(['myProfile']);
+      }
+    });
+  }
+
+  correctDescription() {
+    console.log("Aqui1")
+    this.textService.getCorrections(this.description).subscribe({
+      next: (success) => {
+        if (success === "") {
+          alert("Nenhum erro detectado.");
+        } else {
+          alert(success);
+        }
       }
     });
   }
